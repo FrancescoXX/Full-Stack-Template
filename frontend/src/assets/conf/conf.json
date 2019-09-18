@@ -1,0 +1,284 @@
+{
+  "PARTNERS": [
+    {
+      "name": "Italy",
+      "data": [
+        {
+          "info": "aaabelpaese",
+          "flagcode": "it",
+          "link": "http://esa.it"
+        }
+      ]
+    },
+    {
+      "name": "Austria",
+      "data": [
+        {
+          "info": "info Austria",
+          "flagcode": "at",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Belgium",
+      "data": [
+        {
+          "info": "info Belgium",
+          "flagcode": "be",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Canada",
+      "data": [
+        {
+          "info": "ciaoinfo Canada",
+          "flagcode": "ca",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Czech Republic",
+      "data": [
+        {
+          "info": "info Czech Republic",
+          "flagcode": "cz",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Denmark",
+      "data": [
+        {
+          "info": "info Denmark",
+          "flagcode": "dk",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Estonia",
+      "data": [
+        {
+          "info": "info Estonia",
+          "flagcode": "ee",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Finland",
+      "data": [
+        {
+          "info": "info Finland",
+          "flagcode": "fi",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "France",
+      "data": [
+        {
+          "info": "info France",
+          "flagcode": "fr",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Germany",
+      "data": [
+        {
+          "info": "info Germany",
+          "flagcode": "de",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Greece",
+      "data": [
+        {
+          "info": "info Greece",
+          "flagcode": "gr",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Hungary",
+      "data": [
+        {
+          "info": "info Hungary",
+          "flagcode": "hu",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Ireland",
+      "data": [
+        {
+          "info": "info Ireland",
+          "flagcode": "ie",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Luxembourg",
+      "data": [
+        {
+          "info": "info Luxembourg",
+          "flagcode": "lu",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Norway",
+      "data": [
+        {
+          "info": "info Norway",
+          "flagcode": "no",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Poland",
+      "data": [
+        {
+          "info": "info Poland",
+          "flagcode": "pl",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Portugal",
+      "data": [
+        {
+          "info": "info Portugal",
+          "flagcode": "pt",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Romania",
+      "data": [
+        {
+          "info": "info Romania",
+          "flagcode": "ro",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Slovenia",
+      "data": [
+        {
+          "info": "info Slovenia",
+          "flagcode": "si",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Spain",
+      "data": [
+        {
+          "info": "info Spain",
+          "flagcode": "es",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Sweden",
+      "data": [
+        {
+          "info": "info Sweden",
+          "flagcode": "se",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Netherlands",
+      "data": [
+        {
+          "info": "info Netherlands",
+          "flagcode": "nl",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "United Kingdom",
+      "data": [
+        {
+          "info": "info United Kingdom",
+          "flagcode": "uk",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "India",
+      "data": [
+        {
+          "info": "aaaainfo Indiaaaaainfo Indiaaaaainfo Indiaaaaainfo Indiaaaaainfo Indiaaaaainfo Indiaaaaainfo Indiaaaaainfo Indiaaaaainfo Indiaaaaainfo Indiaaaaainfo India",
+          "flagcode": "in",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Serbia",
+      "data": [
+        {
+          "info": "info Serbia",
+          "flagcode": "rs",
+          "link": "https://sentinel.esa.int"
+        }
+      ]
+    },
+    {
+      "name": "Australia",
+      "data": [
+        {
+          "info": "info Australia",
+          "flagcode": "au",
+          "link": "http://australia.com"
+        },
+        {
+          "info": "info aust2",
+          "flagcode": "au",
+          "link": "http: //nodejs.org"
+        }
+      ]
+    },
+    {
+      "name": "United States",
+      "data": [
+        {
+          "info": "info usa1",
+          "flagcode": "us",
+          "link": "http: //angular.com"
+        },
+        {
+          "info": "info usa2",
+          "flagcode": "it",
+          "link": "http: //nodejs.org"
+        }
+      ]
+    }
+  ]
+}

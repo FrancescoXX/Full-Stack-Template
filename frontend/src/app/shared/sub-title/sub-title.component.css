@@ -1,0 +1,13 @@
+/*
+* CSS FOR SPECIFIC ROW ITEM COMPONENT
+*/
+
+.row-container {
+  /* background-color: lightblue; */
+}
+
+/* Property value */
+.row-value {
+  font-size: 1.5em;
+  color: black;
+}

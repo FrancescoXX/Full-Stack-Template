@@ -1,0 +1,143 @@
+.panel {
+  border: solid;
+  border-radius: 15px;
+  /*height: 400px;*/
+  color: black;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border-color: white;
+  width: 100%;
+}
+
+.panel-column-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.shadow {
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#map {
+  height: 750px;
+}
+
+.imgMap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-group {
+  padding-left: 30px;
+}
+
+.selectCountry {
+  /*text-align:center;*/
+  float: right;
+  display: inline-block;
+  position: fixed;
+  top: 90px!important;
+  right: 150px;
+  z-index: 10;
+  background-color: white;
+}
+
+.modal-dialog {
+  overflow-y: initial !important;
+  overflow-x: none !important;
+}
+
+.modal-body {
+  overflow-y: auto;
+  overflow-x: none !important;
+  padding: 15px !important;
+}
+
+.modal-backdrop {
+  z-index: -1 !important;
+  opacity: 0.0 !important;
+}
+
+.modal-buttons-container {
+  width: 192px;
+  position: fixed !important;
+  top: 60px;
+}
+
+.modal-first-interval-button-usersUpTake {
+  float: left;
+  display: inline-block;
+  border-width: 50%;
+  text-align: center;
+  background-color: #EBEBEB;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-second-interval-button-usersUpTake {
+  float: left;
+  display: inline-block;
+  background-color: #1C5D91;
+  color: #F6F6F6;
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+.chart {
+  top: 135px !important;
+  left: 145px !important;
+}
+
+.leaflet-container {
+  background-color: white;
+}
+
+.leaflet-top {
+  top: 30px!important;
+}
+
+@font-face {
+  font-family: NotesEsaReg;
+  src: url(../../assets/fonts/NotesEsaReg.otf);
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+.leaflet-control-zoomhome a {
+  font: bold 18px "Lucida Console", Monaco, monospace;
+}
+
+a.leaflet-control-zoomhome-in, a.leaflet-control-zoomhome-out {
+  font-size: 1.5em;
+}
+
+.modalTitleClass {
+  text-align: center;
+  font-size: 200%;
+  color: #0098DB;
+  margin: 0px;
+}
+
+.image-volume-class {
+  height: 60px;
+  margin: auto;
+}
+
+.mission-volume-class {
+  font-size: 150%;
+}

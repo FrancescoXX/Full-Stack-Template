@@ -1,0 +1,51 @@
+version: "3.1"
+
+services:
+  # FE
+  # front-end:
+  #   image: "ondadias/user-portal:fe-0.1"
+  #   container_name: fe
+  #   hostname: frontend
+  #   ports:
+  #     - "8080:8080"
+
+  # NODE BACKEND
+  be:
+    # image: "dad2/:fe-test"
+    container_name: fe
+    hostname: fe
+    build: .
+    ports:
+      - "80:80"
+    # environment:
+    #   # http or https
+    #   - APP_PROTOCOL=http
+    #   # To use mail confirmation links
+    #   - HOST=192.168.10.78
+    #   # Port for email confirmation baseurl
+    #   - EXTERNAL_PORT=3000
+    #   # Backend internal port
+    #   - INTERNAL_PORT=2000
+
+    #   # DB configuration
+    #   - PGPASSWORD=ondaportal
+    #   - PGUSER=ondaportal
+    #   - PGDATABASE=ondaportal
+    #   - PGHOST=db
+
+    #   #JWT  string to create and validate tokens
+    #   - JWT_SECRET=somesupersecret
+ 
+    #   # Mailer Service
+    #   - MAILER_SERVICE=gmail
+    #   - MAILER_USER=ondaportal@gmail.com
+    #   - MAILER_PASS=ondatest123
+      
+    #   # Not used. using just MD5 now
+    #   - CRYPTO_PASSWORD=d6F3Efeq
+    #   - CRYPTO_ALGORITHM=aes-256-ctr
+    networks:
+      - dad2_network
+    #   - db
+networks:
+  dad2_network: {}

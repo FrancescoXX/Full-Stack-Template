@@ -1,0 +1,9 @@
+/*
+* CSS FOR SPECIFIC ROW ITEM COMPONENT
+*/
+
+.row-container {
+  font-size: 2em;
+  color: black;
+  /* background-color: lightgray; */
+}

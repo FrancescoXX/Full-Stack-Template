@@ -1,0 +1,821 @@
+    #avail-scrollable {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 100%;
+    }
+
+    .button-group {
+      padding-left: 30px;
+    }
+
+    #chart_availability {
+      align-items: center;
+    }
+
+    .availability-title {
+      text-align: center;
+      text-align: -webkit-center;
+    }
+
+    .avail-first-interval-button {
+      float: left;
+      display: inline-block;
+      border-width: 50%;
+      text-align: center;
+      background-color: #EBEBEB;
+      padding: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      cursor: pointer;
+    }
+
+    .avail-second-interval-button {
+      float: left;
+      display: inline-block;
+      background-color: #1C5D91;
+      color: #F6F6F6;
+      width: 50%;
+      text-align: center;
+      padding: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      cursor: pointer;
+    }
+
+    .availability-page-column-title {
+      height: 150px !important;
+      padding: 40px;
+      color: #606469;
+    }
+
+    .availability-page-column-info-box {
+      border-radius: 30px;
+      font-size: 25px;
+      margin: 30px;
+      padding: 15px;
+      background-color: #f6f6f6;
+    }
+
+    .availability-page-column-container {
+      padding: 5px !important;
+    }
+
+    .availability-page-column {
+      padding: 0px;
+      background-color: #fdfdfd;
+      /*border-radius: 20px;*/
+      -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+    }
+
+    .over-95 {
+      left: 10%;
+      width: 40px;
+      height: 30px;
+      background: rgba(0, 133, 66, 1);
+    }
+
+    .until-90 {
+      left: 10%;
+      width: 40px;
+      height: 30px;
+      background: rgba(253, 200, 47, 1);
+    }
+
+    .under-90 {
+      left: 10%;
+      width: 40px;
+      height: 30px;
+      background: rgba(227, 114, 34, 1);
+    }
+
+    .draw-legend {
+      font-size: 15px;
+      color: grey;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+
+    .scihub {
+      border: solid;
+      border-color: #0099e6;
+      color: #0099e6;
+      margin-bottom: 10px;
+    }
+
+    .inthub {
+      border: solid;
+      border-color: #339933;
+      color: #339933;
+      margin-bottom: 10px;
+    }
+
+    .colhub {
+      border: solid;
+      border-color: #822433;
+      color: #822433;
+      margin-bottom: 10px;
+    }
+
+    .cophub {
+      border: solid;
+      border-color: #ff9933;
+      color: #ff9933;
+      margin-bottom: 10px;
+    }
+
+    .availability-button {
+      font-size: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+      text-align: -webkit-center;
+      display: inline-block;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%
+    }
+
+    .availability-button-column {
+      /*padding: 3px;*/
+    }
+
+    .avail-legend-label {
+      line-height: 30px;
+    }
+
+    .calendar-info-hide {
+      display: none;
+      cursor: default;
+    }
+
+    @media screen and (min-width: 1200px) {
+      .avail-main-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 22px;
+      }
+    }
+
+    @media screen and (min-width: 993px) and (max-width: 1200px) {
+      .avail-main-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 21px;
+      }
+      .over-95 {
+        left: 5%;
+      }
+      .until-90 {
+        left: 5%;
+      }
+      .under-90 {
+        left: 5%;
+      }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 992px) {
+      .avail-main-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 18px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .over-95 {
+        width: 10px;
+        height: 10px;
+      }
+      .until-90 {
+        width: 10px;
+        height: 10px;
+      }
+      .under-90 {
+        width: 10px;
+        height: 10px;
+      }
+      .avail-legend-label {
+        line-height: 10px !important;
+      }
+      .avail-main-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+    }
+
+    .switch-button-avail {
+      width: 192px;
+      position: fixed;
+      top: 20px;
+      z-index: 10;
+    }
+
+    .availability-page-chart {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0px !important;
+    }
+
+    /*****/
+
+    #avail-calendar-content-horizontal {
+      display: inline-block;
+    }
+
+    #avail-calendar-content-horizontal-curryear {
+      display: inline-block;
+    }
+
+    .avail-calendar-content-horizontal {
+      display: block;
+      width: 100%;
+      white-space: nowrap;
+    }
+
+    .avail-calendar-container-horizontal {
+      display: block;
+      width: 100%;
+      white-space: nowrap;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    #avail-calendar-content .avail-month {
+      fill: none !important;
+      stroke: #000;
+      stroke-width: 2px;
+    }
+
+    #avail-calendar-content-curryear .avail-month {
+      fill: none !important;
+      stroke: #000;
+      stroke-width: 2px;
+    }
+
+    #avail-calendar-content .avail-day {
+      fill: #fff !important;
+      stroke: #ccc !important;
+    }
+
+    #avail-calendar-content-curryear .avail-day {
+      fill: #fff !important;
+      stroke: #ccc !important;
+    }
+
+    #avail-calendar-content-horizontal .avail-month {
+      fill: none !important;
+      stroke: #000;
+      stroke-width: 2px;
+    }
+
+    #avail-calendar-content-horizontal-curryear .avail-month {
+      fill: none !important;
+      stroke: #000;
+      stroke-width: 2px;
+    }
+
+    #avail-calendar-content-horizontal .avail-day {
+      fill: #fff !important;
+      stroke: #ccc !important;
+    }
+
+    #avail-calendar-content-horizontal-curryear .avail-day {
+      fill: #fff !important;
+      stroke: #ccc !important;
+    }
+
+    .RdYlGn .q0-11 {
+      fill: rgb(165, 0, 38)
+    }
+
+    .RdYlGn .q1-11 {
+      fill: rgb(215, 48, 39)
+    }
+
+    .RdYlGn .q2-11 {
+      fill: rgb(244, 109, 67)
+    }
+
+    .RdYlGn .q3-11 {
+      fill: rgb(253, 174, 97)
+    }
+
+    .RdYlGn .q4-11 {
+      fill: rgb(254, 224, 139)
+    }
+
+    .RdYlGn .q5-11 {
+      fill: rgb(255, 255, 191)
+    }
+
+    .RdYlGn .q6-11 {
+      fill: rgb(217, 239, 139)
+    }
+
+    .RdYlGn .q7-11 {
+      fill: rgb(166, 217, 106)
+    }
+
+    .RdYlGn .q8-11 {
+      fill: rgb(102, 189, 99)
+    }
+
+    .RdYlGn .q9-11 {
+      fill: rgb(26, 152, 80)
+    }
+
+    .RdYlGn .q10-11 {
+      fill: rgb(0, 104, 55)
+    }
+
+    .avail-calendar-content {
+      /*max-height: calc(100% - 150px);*/
+      overflow-y: auto !important;
+      overflow-x: auto !important;
+      /* width: 100%;*/
+    }
+
+    /*.avail-calendar-content-horizontal {
+        max-height: calc(100% - 150px);
+        overflow-x: auto !important;
+        width: 100%;
+    }*/
+
+    #avail-calendar-container {
+      /*height: 100%;*/
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #avail-calendar-container header {
+      width: 100%;
+      height: 60px;
+      /*position: fixed; */
+      background: white;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      /*overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;*/
+      display: block;
+    }
+
+    .avail-hub-title {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold !important;
+      display: inline-block;
+    }
+
+    .avail-calendar-title {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: normal !important;
+      display: inline-block;
+    }
+
+    .mission-bar {
+      /* min-height: 100%; */
+      max-height: 30px !important;
+      background: grey;
+      padding-bottom: 0px !important;
+      padding-top: 30px;
+    }
+
+    .avail-calendar-main-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 22px;
+    }
+
+    .max-product-number-per-date {
+      color: black;
+      text-align: right;
+      font-size: 16px !important;
+    }
+
+    .min-product-number-per-date {
+      color: black;
+      font-size: 16px !important;
+    }
+
+    .avail-calendar-main-title h2 {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .svg-container-avail {}
+
+    @media screen and (min-width: 1200px) {
+      .svg-container {
+        position: relative;
+        /*left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);*/
+      }
+      .avail-calendar-content {
+        /*max-width: 450px;*/
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media screen and (min-width: 993px) and (max-width: 1200px) {
+      #avail-calendar-container header {
+        font-size: 16px;
+      }
+      .avail-calendar-title {
+        font-size: 16px;
+        margin-top: 1px;
+      }
+      .avail-hub-title {
+        font-size: 16px;
+        margin-top: 1px;
+      }
+      .avail-calendar-main-title {
+        font-size: 18px;
+      }
+      .avail-calendar-date-detail {
+        font-size: 16px;
+      }
+      .svg-container {
+        position: relative;
+        /*left: 100%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);*/
+      }
+      .avail-calendar-content {
+        /*max-width: 450px;*/
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 992px) {
+      #avail-calendar-container header {
+        font-size: 14px;
+      }
+      .avail-calendar-title {
+        font-size: 14px;
+        margin-top: 1px;
+      }
+      .avail-hub-title {
+        font-size: 14px;
+        margin-top: 1px;
+      }
+      .avail-calendar-main-title {
+        font-size: 16px;
+      }
+      .avail-calendar-date-detail {
+        font-size: 14px;
+      }
+      .svg-container {
+        position: relative;
+        /*left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);*/
+      }
+      .avail-calendar-content {
+        /*max-width: 450px;*/
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .avail-calendar-main-title h2 {
+        font-size: 16px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      #avail-calendar-container header {
+        font-size: 14px;
+      }
+      .avail-calendar-title {
+        font-size: 16px !important;
+        margin-top: 1px;
+      }
+      .avail-hub-title {
+        font-size: 16px !important;
+        margin-top: 1px;
+      }
+      .avail-calendar-main-title {
+        font-size: 14px;
+      }
+      .avail-calendar-date-detail {
+        font-size: 14px !important;
+      }
+      .svg-container {
+        position: relative;
+        /*left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);*/
+      }
+      .mission-bar {
+        /* min-height: 100%; */
+        max-height: 20px !important;
+        background: grey;
+        padding-bottom: 0px !important;
+        padding-top: 20px;
+      }
+      .max-product-number-per-date {
+        font-size: 14px !important;
+      }
+      .min-product-number-per-date {
+        font-size: 14px !important;
+      }
+      .avail-calendar-content {
+        /*max-width: 450px;*/
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .avail-calendar-main-title h2 {
+        font-size: 16px;
+      }
+    }
+
+    @media screen and (max-height: 700px) {
+      .mission-bar {
+        /* min-height: 100%; */
+        max-height: 20px !important;
+        background: grey;
+        padding-bottom: 0px !important;
+        padding-top: 20px;
+      }
+      .max-product-number-per-date {
+        font-size: 14px !important;
+      }
+      .min-product-number-per-date {
+        font-size: 14px !important;
+      }
+      .avail-calendar-main-title h2 {
+        font-size: 16px;
+      }
+    }
+
+    #avail-calendar-header {
+      width: 100%;
+      left: 0;
+      right: 0;
+      /*line-height: 60px;*/
+    }
+
+    .avail-calendar-date-detail {
+      font-size: 18px;
+      font-weight: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+      text-align: -webkit-center;
+      height: 30px;
+    }
+
+    .avail-calendar-page-column {
+      padding: 0px;
+      background-color: #fdfdfd;
+      -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+    }
+
+    #avail-calendar-content .avail-month-title {
+      font-size: 14px !important;
+      font-weight: bold !important;
+    }
+
+    #avail-calendar-content .avail-calendar-year-label {
+      font-size: 20px !important;
+      font-weight: bold !important;
+    }
+
+    #avail-calendar-content-horizontal .avail-month-title {
+      font-size: 14px !important;
+      font-weight: bold !important;
+    }
+
+    #avail-calendar-content-horizontal-curryear .avail-month-title {
+      font-size: 14px !important;
+      font-weight: bold !important;
+    }
+
+    #avail-calendar-content-horizontal .avail-calendar-year-label {
+      font-size: 20px !important;
+      font-weight: bold !important;
+    }
+
+    #avail-calendar-content-horizontal-curryear .avail-calendar-year-label {
+      font-size: 20px !important;
+      font-weight: bold !important;
+    }
+
+    .avail-calendar-selected-date {
+      height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      padding-bottom: 5px;
+      padding-left: 20px;
+    }
+
+    .avail-calendar-details-description {
+      height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      padding-left: 20px;
+    }
+
+    .avail-calendar-info-date {
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
+      text-align: -webkit-center;
+      padding-top: 0px;
+    }
+
+    .avail-calendar-date-details {
+      max-height: calc(100% - 40px);
+      overflow-y: auto;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    /*Modal CSS*/
+
+    .modal-dialog {
+      width: 80% !important;
+    }
+
+    #chart_gantt, #wrapper {
+      width: 90%;
+      margin-left: 20px;
+    }
+
+    .chart {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      /*width: 100% !important;
+height:100% !important;*/
+    }
+
+    .axis path, .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .x>g.tick>text {
+      transform: rotate(-65deg);
+      text-anchor: end !important;
+    }
+
+    .bar {
+      fill: #33b5e5;
+      color: #33b5e5 !important;
+    }
+
+    .bar-failed {
+      fill: #CC0000;
+      color: #CC0000 !important;
+      border: 1px solid black;
+    }
+
+    .bar-running {
+      fill: #669900;
+      color: #669900 !important;
+    }
+
+    .bar-succeeded {
+      fill: #33b5e5;
+    }
+
+    .bar-killed {
+      fill: #ffbb33;
+      color: #ffbb33 !important;
+    }
+
+    .pane {
+      cursor: pointer;
+      fill: transparent;
+    }
+
+    #myModalLabel {
+      text-align: center;
+    }
+
+    .panel-heading {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      .details-label {
+        text-align: right;
+      }
+    }
+
+    @media screen and (min-width: 993px) and (max-width: 1200px) {
+      .details-label {
+        text-align: right;
+      }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 992px) {
+      #events-container .img-circle {
+        height: 50px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      #events-container .img-circle {
+        height: 50px;
+      }
+    }
+
+    .event-tag {
+      font-size: 14px;
+      margin-left: 20px;
+    }
+
+    .tag-s1 {
+      background-color: #FDC82F !important;
+    }
+
+    .tag-scihub {
+      background-color: #0098DB !important;
+    }
+
+    .tag-s3 {
+      background-color: rgb(0, 152, 219);
+    }
+
+    /*.modal-open .modal{
+overflow-y: hidden !important;
+}*/
+
+    /* Important part */
+
+    .modal-dialog {
+      overflow-y: initial !important;
+      overflow-x: none !important
+    }
+
+    .modal-body {
+      overflow-y: auto;
+      overflow-x: none !important
+    }
+
+    .calendar-date-detail-events {
+      margin-top: 10px;
+    }
+
+    .template {
+      display: none;
+    }
+
+    .hide-element {
+      display: none;
+    }
+
+    .modal-backdrop {
+      z-index: -1 !important;
+    }
+
+    .event-href-external-url {
+      word-wrap: break-word;
+    }
+
+    .mymodal-top {
+      /* background-color: red; */
+    }
+
+    .mymodal-mid {
+      /* background-color: lightgray; */
+    }
+
+    .mymodal-bottom {
+      /* background-color: green; */
+    }
+
+    .mymodal-title {
+      color: #333;
+      background-color: #f5f5f5;
+      border-color: #ddd;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+    }

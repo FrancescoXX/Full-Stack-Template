@@ -1,0 +1,141 @@
+{
+  "version": "1.4.8_under_validation",
+  "loginDomain": "dashboard.copernicus.eu/",
+  "protocol": "https://",
+  "events": {
+      "mission_tags": [{
+          "name": "Sentinel-1",
+          "value": "rgb(253, 200, 47)"
+      }, {
+          "name": "Sentinel-2",
+          "value": "rgb(0, 133, 66)"
+      }, {
+          "name": "Sentinel-3",
+          "value": "rgb(0, 152, 219)"
+      }, {
+          "name": "default",
+          "value": "rgb(227, 114, 34)"
+      }],
+      "instrument_tags": [{
+          "name": "default",
+          "value": "rgb(122,122,122)"
+      }]
+  },
+
+  "s1Labels": [{
+      "GRDH": "L1 GRDH"
+  }, {
+      "GRDM": "L1 GRDM"
+  }, {
+      "OCN_": "L2 OCN"
+  }, {
+      "RAW_": "L0 RAW"
+  }, {
+      "SLC_": "L1 SLC"
+  }],
+  "s2Labels": [{
+      "MSIL1C": "L1C"
+  }, {
+      "MSIL2A": "L2A"
+  }],
+  "s3Labels": [{
+      "OL_1_EFR___": "OLCI L1 FR"
+  }, {
+      "OL_1_ERR___": "OLCI L1 RR"
+  }, {
+      "SL_1_RBT___": "SLSTR  L1 RBT"
+  }, {
+      "SR_1_SRA_A_": "SRAL L1 A"
+  }, {
+      "SR_1_SRA_BS": "SRAL L1 BS"
+  }, {
+      "SR_1_SRA___": "SRAL L1"
+  }, {
+      "OL_2_LFR___": "OLCI L2 Land FR"
+  }, {
+      "OL_2_LRR___": "OLCI L2 Land RR"
+  }, {
+      "SL_2_LST___": "SLSTR L2 Land"
+  }, {
+      "SY_2_SYN___": "SYN L2"
+  }, {
+      "SY_2_VGP___": "SYN L2 VGP"
+  }, {
+      "SY_2_VG1___": "SYN L2 VG1"
+  }, {
+      "SY_2_V10___": "SYN L2 VG10"
+  }, {
+      "SR_2_LAN___": "SRAL L2 Land"
+  }, {
+      "TM_0_NAT___": "TM 0 NAT"
+  }],
+  "page3DefaultColors": [
+      "#00338D",
+      "#0098DB",
+      "#008542",
+      "#E37222",
+      "#D0103A",
+      "#FDC82F",
+      "#ff99c8",
+      "#829cbc",
+      "#6b0392",
+      "#ffad69",
+      "#b81365",
+      "#5f0f40",
+      "#86797d",
+      "#00CC99",
+      "#b2c326",
+      "#6188e2",
+      "#dda458",
+      "#eacf7d",
+      "#a748ca",
+      "#0544d3",
+      "#0544ca"
+  ],
+
+  "page3ChartColors": [{
+      "GRDH": "#00338D"
+  }, {
+      "GRDM": "#0098DB"
+  }, {
+      "OCN_": "#008542"
+  }, {
+      "RAW_": "#E37222"
+  }, {
+      "SLC_": "#D0103A"
+  }, {
+      "MSIL1C": "#00338D"
+  }, {
+      "MSIL2A": "#0098DB"
+  }, {
+      "OL_1_EFR___": "#00338D"
+  }, {
+      "OL_1_ERR___": "#0098DB"
+  }, {
+      "SL_1_RBT___": "#008542"
+  }, {
+      "SR_1_SRA_A_": "#E37222"
+  }, {
+      "SR_1_SRA_BS": "#D0103A"
+  }, {
+      "SR_1_SRA___": "#FDC82F"
+  }, {
+      "OL_2_LFR___": "#ff99c8"
+  }, {
+      "OL_2_LRR___": "#829cbc"
+  }, {
+      "SL_2_LST___": "#6b0392"
+  }, {
+      "SY_2_SYN___": "#ffad69"
+  }, {
+      "SY_2_VGP___": "#b81365"
+  }, {
+      "SY_2_VG1___": "#5f0f40"
+  }, {
+      "SY_2_V10___": "#86797d"
+  }, {
+      "SR_2_LAN___": "#00CC99"
+  }, {
+      "TM_0_NAT___": "#0544ca"
+  }
+]}

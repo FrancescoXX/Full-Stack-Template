@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  /* overflow-y: scroll; 
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+}
+
+html::-webkit-scrollbar {
+  /* WebKit */
+  width: 1;
+  height: 1; 
+}
+
+.unselectable {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}

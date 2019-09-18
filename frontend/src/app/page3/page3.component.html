@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <app-row-title [rowTitleComponent]="myTitle"></app-row-title>
+  <br>
+  <button (click)="getBookWithToken()" class="btn btn-primary">TEST TOKEN</button>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+
+          <div>
+            <img class="text-center" style="margin: auto; width:130px; float: left;" class="img-responsive switch"
+              src="../../assets/dev/screenshots/switch1.png">
+          </div>
+          <div>
+            <img class="text-center" style="margin: auto; width:200px; float: left;" class="img-responsive switch"
+              src="../../assets/dev/screenshots/switch2.png">
+          </div>
+
+
+        </div>
+
+        <div class="col-md-6">
+          <div class="text-center" style="margin: auto;">
+            <app-row-title-value [titleValue]="child1"></app-row-title-value>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-row-title-value class="text-center" [titleValue]="child2"></app-row-title-value>
+      <br>
+      <app-row-doughnut [rowDoughnutComponent]="doughnut1"></app-row-doughnut>
+    </div>
+  </div>
+  <div class="row">
+    <br>
+    <div class="col-md-6">
+      <app-sub-title [subTitleComponent]="subtitle1"></app-sub-title>
+      <div>
+        <img style="margin: auto" src="../../assets/dev/graph1b.png" class="img-responsive">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-sub-title [subTitleComponent]="subtitle2"></app-sub-title>
+      <div>
+        <img style="margin: auto" src="../../assets/dev/graph2b.png" class="img-responsive">
+      </div>
+    </div>
+  </div>
+</div>

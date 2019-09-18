@@ -1,0 +1,206 @@
+<h3 style="width:100%; text-align:center;">Active Users on Copernicus Open Access Hub: EU-ESA Member and Cooperating
+  State focus</h3>
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="btn-group selectCountry">
+        <button id="selectCountryMenu" type="button" class="btn btn-default" data-toggle="dropdown" aria-pressed="false"
+          aria-haspopup="true" title="Select a country"><span id="title">&nbsp;Select a country&nbsp;</span>&nbsp;<span
+            class="caret"></span></button>
+        <ul class="dropdown-menu scrollable-menu" aria-labelledby="selectCountryMenu">
+          <li><a href="#" class="countryName" data-name="Austria">Austria</a></li>
+          <li><a href="#" class="countryName" data-name="Belgium">Belgium</a></li>
+          <li><a href="#" class="countryName" data-name="Bulgaria">Bulgaria</a></li>
+          <li><a href="#" class="countryName" data-name="Canada">Canada</a></li>
+          <li><a href="#" class="countryName" data-name="Croatia">Croatia</a></li>
+          <li><a href="#" class="countryName" data-name="Cyprus">Cyprus</a></li>
+          <li><a href="#" class="countryName" data-name="Czech Republic">Czech Republic</a></li>
+          <li><a href="#" class="countryName" data-name="Denmark">Denmark</a></li>
+          <li><a href="#" class="countryName" data-name="Estonia">Estonia</a></li>
+          <li><a href="#" class="countryName" data-name="Finland">Finland</a></li>
+          <li><a href="#" class="countryName" data-name="France">France</a></li>
+          <li><a href="#" class="countryName" data-name="Germany">Germany</a></li>
+          <li><a href="#" class="countryName" data-name="Greece">Greece</a></li>
+          <li><a href="#" class="countryName" data-name="Hungary">Hungary</a></li>
+          <li><a href="#" class="countryName" data-name="Ireland">Ireland</a></li>
+          <li><a href="#" class="countryName" data-name="Italy">Italy</a></li>
+          <li><a href="#" class="countryName" data-name="Latvia">Latvia</a></li>
+          <li><a href="#" class="countryName" data-name="Lithuania">Lithuania</a></li>
+          <li><a href="#" class="countryName" data-name="Luxembourg">Luxembourg</a></li>
+          <li><a href="#" class="countryName" data-name="Malta">Malta</a></li>
+          <li><a href="#" class="countryName" data-name="Netherlands">Netherlands</a></li>
+          <li><a href="#" class="countryName" data-name="Norway">Norway</a></li>
+          <li><a href="#" class="countryName" data-name="Poland">Poland</a></li>
+          <li><a href="#" class="countryName" data-name="Portugal">Portugal</a></li>
+          <li><a href="#" class="countryName" data-name="Romania">Romania</a></li>
+          <li><a href="#" class="countryName" data-name="Slovakia">Slovakia</a></li>
+          <li><a href="#" class="countryName" data-name="Slovenia">Slovenia</a></li>
+          <li><a href="#" class="countryName" data-name="Spain">Spain</a></li>
+          <li><a href="#" class="countryName" data-name="Sweden">Sweden</a></li>
+          <li><a href="#" class="countryName" data-name="Switzerland">Switzerland</a></li>
+          <li><a href="#" class="countryName" data-name="United Kingdom">United Kingdom</a></li>
+        </ul>
+      </div>
+      <div id='map'></div>
+    </div>
+  </div>
+  <!-- Modal 1-->
+  <div class="modal fade" id="modal1" tabindex='-1' data-backdrop="true" keyboard="true" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+
+      <!-- Modal content 1-->
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#usersUptake" id="tabUserUptake">User Uptake</a></li>
+            <li><a data-toggle="tab" href="#usersPerMission" id="tabUsersPerMission">Users per Mission</a></li>
+          </ul>
+          <div class="col-md-12 text-center">
+            <div class="modal-buttons-container">
+              <div class="modal-first-interval-button-usersUpTake" onclick="modalFirstIntervalUsersUpTake()">Last month
+              </div>
+              <div class="modal-second-interval-button-usersUpTake" onclick="modalSecondIntervalUsersUpTake()">Last 3
+                months</div>
+            </div>
+            <div class="btn-group">
+              <button id="countryModalMenu" type="button" class="btn btn-default" data-toggle="dropdown"
+                aria-pressed="false" aria-haspopup="true" title="Select a country"><span id="modalTitle"
+                  class="modalTitleClass"></span>&nbsp;<span class="caret"></span></button>
+              <ul class="dropdown-menu scrollable-menu" aria-labelledby="countryModalMenu">
+                <li><a href="#" class="countryNameModal" data-name="Austria">Austria</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Belgium">Belgium</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Bulgaria">Bulgaria</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Canada">Canada</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Croatia">Croatia</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Cyprus">Cyprus</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Czech Republic">Czech Republic</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Denmark">Denmark</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Estonia">Estonia</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Finland">Finland</a></li>
+                <li><a href="#" class="countryNameModal" data-name="France">France</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Germany">Germany</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Greece">Greece</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Hungary">Hungary</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Ireland">Ireland</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Italy">Italy</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Latvia">Latvia</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Lithuania">Lithuania</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Luxembourg">Luxembourg</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Malta">Malta</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Netherlands">Netherlands</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Norway">Norway</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Poland">Poland</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Portugal">Portugal</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Romania">Romania</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Slovakia">Slovakia</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Slovenia">Slovenia</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Spain">Spain</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Sweden">Sweden</a></li>
+                <li><a href="#" class="countryNameModal" data-name="Switzerland">Switzerland</a></li>
+                <li><a href="#" class="countryNameModal" data-name="United Kingdom">United Kingdom</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div id="usersUptake" class="tab-pane fade in active">
+              <div class="row">
+                <div class="col-md-6 panel-column-container">
+                  <div class="panel shadow">
+
+                    <br><br>
+                    <p style="text-align:center;font-size: 150%;margin: 0px;">Currently registered users</p>
+                    <p id="currentlyRegisteredUsers"
+                      style="text-align:center;font-size: 300%;color: #0098DB;margin: 0px;">----</p>
+                    <p id="currentlyRegisteredUsersIncrease"
+                      style="text-align:center;font-size: 150%;color: #0098DB;margin: 0px;">Increase</p>
+                    <div id="currentlyRegisteredUsersIncreaseChart" style="text-align:center"></div>
+                    <!--<hr class="style13">-->
+                  </div>
+                </div>
+                <div class="col-md-6 panel-column-container">
+                  <div class="panel shadow">
+                    <br><br>
+                    <p style="text-align:center;font-size: 150%;margin: 0px;">Active users</p>
+                    <p id="activeUsers" style="text-align:center;font-size: 300%;color: #0098DB;margin: 0px;">----</p>
+                    <p id="activeUsersIncrease" style="text-align:center;font-size: 150%;color: #0098DB;margin: 0px;">
+                      Increase/Decrease</p>
+                    <div id="activeUsersIncreaseChart" style="text-align:center"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="usersPerMission" class="tab-pane fade">
+              <div class="row">
+                <div class="col-md-6 panel-column-container">
+
+                  <div class="panel shadow" style="text-align:center">
+
+                    <br><br>
+                    <img class="image-volume-class" src="images/sentinels/s-1a_black.png">
+                    <p class="mission-volume-class">Sentinel-1</p>
+                    <p style="text-align:center;font-size: 150%;margin: 0px;">Total active users</p>
+                    <p style="text-align:center;font-size: 150%;margin: 0px;padding: 3px 5px 3px 5px;"></p>
+                    <p id="totalActiveUsersS1" style="text-align:center;font-size: 300%;color: #0098DB;margin: 0px;">
+                      ----</p>
+                    <p id="totalActiveUsersS1Increase"
+                      style="text-align:center;font-size: 150%;color: #0098DB;margin: 0px;">Increase/Decrease</p>
+                    <div id="totalActiveUsersS1Chart" style="text-align:center"></div>
+                  </div>
+                </div>
+                <div class="col-md-6 panel-column-container">
+                  <div class="panel shadow" style="text-align:center">
+                    <br><br>
+                    <img class="image-volume-class" src="images/sentinels/s-2a_black.png">
+                    <p class="mission-volume-class">Sentinel-2</p>
+                    <p style="text-align:center;font-size: 150%;margin: 0px;">Total active users</p>
+                    <p style="text-align:center;font-size: 150%;margin: 0px;padding: 3px 5px 3px 5px;"></p>
+                    <p id="totalActiveUsersS2" style="text-align:center;font-size: 300%;color: #0098DB;margin: 0px;">
+                      ----</p>
+                    <p id="totalActiveUsersS2Increase"
+                      style="text-align:center;font-size: 150%;color: #0098DB;margin: 0px;">Increase/Decrease</p>
+                    <div id="totalActiveUsersS2Chart" style="text-align:center"></div>
+                  </div>
+                </div>
+                <!--<div class="col-md-4 panel-column-container">
+													<div class="panel shadow" style="text-align:center">
+														<img class="image-volume-class" src="images/sentinels/sentinel-3.png">
+														<p class="mission-volume-class">Sentinel-3</p>
+														<p style="text-align:center;font-size: 150%;margin: 0px;">Total active users</p>
+															<div class="row">
+																<div class="col-xs-6">
+																	<p style="text-align:center;font-size: 150%;margin: 0px;" class="time-interval-label">Optical</p>
+																	<p id="totalActiveUsersS3Optical" style="text-align:center;font-size: 300%;color: #0098DB;margin: 0px;">----</p>
+																	<p id="totalActiveUsersS3OpticalIncrease" style="text-align:center;font-size: 150%;color: #0098DB;margin: 0px;">Increase/Decrease</p>
+																	<div id="totalActiveUsersS3OpticalChart" style="text-align:center"></div>
+																</div>
+																<div class="col-xs-6">
+																	<p style="text-align:center;font-size: 150%;margin: 0px;" class="time-interval-label">Topography</p>
+																	<p id="totalActiveUsersS3Topography" style="text-align:center;font-size: 300%;color: #0098DB;margin: 0px;">----</p>
+																	<p id="totalActiveUsersS3TopographyIncrease" style="text-align:center;font-size: 150%;color: #0098DB;margin: 0px;">Increase/Decrease</p>
+																	<div id="totalActiveUsersS3TopographyChart" style="text-align:center"></div>
+																</div>
+															</div>
+													</div>
+												</div>-->
+              </div>
+
+
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    <!--end of Modal 1-->
+  </div>
+</div>

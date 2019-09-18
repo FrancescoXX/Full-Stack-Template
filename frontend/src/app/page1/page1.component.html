@@ -1,0 +1,119 @@
+<div class="container-fluid">
+	<app-row-title [rowTitleComponent]="myTitle"></app-row-title>
+	<div class="row">
+		<div class="text-right">
+			<button (click)="toggleDropdown()" id="selectCountryMenu" type="button" class="btn btn-default"
+				data-toggle="dropdown" aria-pressed="false" aria-haspopup="true" title="Login for private informations"><span
+					id="title">&nbsp;Select a country&nbsp;</span>&nbsp;<span class="caret"></span></button>
+
+			<!-- <div (click)="toggleDropdown()" class="dropdown dropbtn glyphicon glyphicon-menu-hamburger"></div> -->
+		</div>
+		<div id="page1Dropdown" class="dropdown-content" style="z-index: 1000 !important;">
+
+			<!-- <a routerLink="/home" class="menu-item">Main Facts</a>
+			<a routerLink="/overview" class="menu-item">Hub Overview</a>
+			<a routerLink="/product-availability" class="menu-item">Product Availability</a>
+			<a class="menu-item separator"></a>
+			<a routerLink="/users-by-continent" class="menu-item">Users by continent</a>
+			<a routerLink="/users-in-eu-esa-states" class="menu-item">Users in EU-ESA states</a>
+			<a routerLink="/users-trends" class="menu-item">Users trends</a>
+			<a class="menu-item separator"></a>
+			<a routerLink="/mission-facts" class="menu-item">Mission Facts</a>
+			<a routerLink="/dissemination-trends" class="menu-item">Dissemination trends</a>
+			<a class="menu-item separator"></a>
+			<a routerLink="/availability" class="menu-item">Service Availability</a> -->
+
+
+			<!-- <a routerLink="/page1" class="menu-item">Page 1</a>
+					<a routerLink="/page2" class="menu-item">Page 2</a>
+					<a routerLink="/page3" class="menu-item">Page 3</a> -->
+			<!-- <a routerLink="/admin" class="menu-item">Admin</a>
+					<a routerLink="/adminlogin" class="menu-item">Admin Login</a>
+					<a routerLink="/collgs" class="menu-item">CollGS</a>
+					<a routerLink="/legacy1" class="menu-item">Legacy1</a>
+					<a routerLink="/rxjs" class="menu-item">rxjs</a>
+					<a routerLink="/collgslogin" class="menu-item">collGS Login</a> -->
+			<!-- <a routerLink="" class="menu-item">________________</a>			 -->
+		</div>
+		<!-- <div (click)="toggleDropdown()" class="dropdown dropbtn">
+			<button class="btn btn-default">
+				<span>Select a country</span>&nbsp;
+				<span class="caret"></span>
+			</button>
+		</div>
+		<div id="page1Dropdown" class="dropdown-content" style="z-index: 1000 !important;">
+				<li><a href="#" class="countryName" data-name="Austria">Austria</a></li>
+				<li><a href="#" class="countryName" data-name="Austria">Austria</a></li>
+				<li><a href="#" class="countryName" data-name="Austria">Austria</a></li>
+				<li><a href="#" class="countryName" data-name="Austria">Austria</a></li>
+				<li><a href="#" class="countryName" data-name="Austria">Austria</a></li> -->
+		<!-- <a routerLink="/home" class="menu-item">Main Facts</a>
+			<a routerLink="/overview" class="menu-item">Hub Overview</a>
+			<a routerLink="/product-availability" class="menu-item">Product Availability</a>
+			<a class="menu-item separator"></a>
+			<a routerLink="/users-by-continent" class="menu-item">Users by continent</a>
+			<a routerLink="/users-in-eu-esa-states" class="menu-item">Users in EU-ESA states</a>
+			<a routerLink="/users-trends" class="menu-item">Users trends</a>
+			<a class="menu-item separator"></a>
+			<a routerLink="/mission-facts" class="menu-item">Mission Facts</a>
+			<a routerLink="/dissemination-trends" class="menu-item">Dissemination trends</a>
+			<a class="menu-item separator"></a>
+			<a routerLink="/availability" class="menu-item">Service Availability</a> -->
+
+
+		<!-- <a routerLink="/page1" class="menu-item">Page 1</a>
+				<a routerLink="/page2" class="menu-item">Page 2</a>
+				<a routerLink="/page3" class="menu-item">Page 3</a> -->
+		<!-- <a routerLink="/admin" class="menu-item">Admin</a>
+				<a routerLink="/adminlogin" class="menu-item">Admin Login</a>
+				<a routerLink="/collgs" class="menu-item">CollGS</a>
+				<a routerLink="/legacy1" class="menu-item">Legacy1</a>
+				<a routerLink="/rxjs" class="menu-item">rxjs</a>
+				<a routerLink="/collgslogin" class="menu-item">collGS Login</a> -->
+		<!-- <a routerLink="" class="menu-item">________________</a>			 -->
+		<!-- </div> -->
+		<!-- <div class="btn-group selectCountry">
+			<button id="selectCountryMenu" type="button" class="btn btn-default" data-toggle="dropdown" aria-pressed="false"
+				aria-haspopup="true" title="Select a country"><span id="title">&nbsp;Select a country&nbsp;</span>&nbsp;<span
+					class="caret"></span></button>
+			<ul class="dropdown-menu scrollable-menu" aria-labelledby="selectCountryMenu">
+				<li><a href="#" class="countryName" data-name="Austria">Austria</a></li>
+				<li><a href="#" class="countryName" data-name="Belgium">Belgium</a></li>
+				<li><a href="#" class="countryName" data-name="Bulgaria">Bulgaria</a></li>
+				<li><a href="#" class="countryName" data-name="Canada">Canada</a></li>
+				<li><a href="#" class="countryName" data-name="Croatia">Croatia</a></li>
+				<li><a href="#" class="countryName" data-name="Cyprus">Cyprus</a></li>
+				<li><a href="#" class="countryName" data-name="Czech Republic">Czech Republic</a></li>
+				<li><a href="#" class="countryName" data-name="Denmark">Denmark</a></li>
+				<li><a href="#" class="countryName" data-name="Estonia">Estonia</a></li>
+				<li><a href="#" class="countryName" data-name="Finland">Finland</a></li>
+				<li><a href="#" class="countryName" data-name="France">France</a></li>
+				<li><a href="#" class="countryName" data-name="Germany">Germany</a></li>
+				<li><a href="#" class="countryName" data-name="Greece">Greece</a></li>
+				<li><a href="#" class="countryName" data-name="Hungary">Hungary</a></li>
+				<li><a href="#" class="countryName" data-name="Ireland">Ireland</a></li>
+				<li><a href="#" class="countryName" data-name="Italy">Italy</a></li>
+				<li><a href="#" class="countryName" data-name="Latvia">Latvia</a></li>
+				<li><a href="#" class="countryName" data-name="Lithuania">Lithuania</a></li>
+				<li><a href="#" class="countryName" data-name="Luxembourg">Luxembourg</a></li>
+				<li><a href="#" class="countryName" data-name="Malta">Malta</a></li>
+				<li><a href="#" class="countryName" data-name="Netherlands">Netherlands</a></li>
+				<li><a href="#" class="countryName" data-name="Norway">Norway</a></li>
+				<li><a href="#" class="countryName" data-name="Poland">Poland</a></li>
+				<li><a href="#" class="countryName" data-name="Portugal">Portugal</a></li>
+				<li><a href="#" class="countryName" data-name="Romania">Romania</a></li>
+				<li><a href="#" class="countryName" data-name="Slovakia">Slovakia</a></li>
+				<li><a href="#" class="countryName" data-name="Slovenia">Slovenia</a></li>
+				<li><a href="#" class="countryName" data-name="Spain">Spain</a></li>
+				<li><a href="#" class="countryName" data-name="Sweden">Sweden</a></li>
+				<li><a href="#" class="countryName" data-name="Switzerland">Switzerland</a></li>
+				<li><a href="#" class="countryName" data-name="United Kingdom">United Kingdom</a></li>
+			</ul>
+		</div> -->
+	</div>
+	<div class="row">
+		<app-row-title-value class="col-md-6" [titleValue]="child1"></app-row-title-value>
+		<app-row-title-value class="col-md-6" [titleValue]="child2"></app-row-title-value>
+	</div>
+	<app-map></app-map>
+</div>

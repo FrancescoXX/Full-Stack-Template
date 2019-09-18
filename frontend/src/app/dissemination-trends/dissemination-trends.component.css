@@ -1,0 +1,129 @@
+.axis--x path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.scrollable {
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+#ginetto {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 90%;
+  height: 90%;
+}
+
+.trends-page-container {
+  text-align: center;
+}
+
+.trends-page-column-title {
+  height: 60px !important;
+  padding: 20px;
+  color: #606469;
+}
+
+.trends-page-column-info-box {
+  border-radius: 30px;
+  font-size: 25px;
+  margin-left: 30px;
+  margin-right: 30px;
+  /*padding:15px;*/
+  background-color: #f6f6f6;
+  margin-top: 10px;
+}
+
+.trends-page-column-container {
+  padding: 5px !important;
+}
+
+.trends-page-column {
+  padding: 0px;
+  /*background-color: #fdfdfd;*/
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.trends-page-global-information-container {
+  text-align: center;
+  font-size: 30px;
+}
+
+.trends-page-global-information {
+  background-color: #FDE3A7;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.trends-page-chart {
+  padding: 30px;
+  margin: 0px !important;
+}
+
+.trends-page-total-downloads {
+  color: #606469;
+  font-size: 30px;
+}
+
+.trends-page-total-downloads-label {
+  font-size: 20px;
+}
+
+.switch-button:hover {
+  cursor: pointer;
+}
+
+.switch-button {
+  position: fixed;
+  z-index: 10000;
+  width: 200px;
+  top: 10px;
+}
+
+.first-interval-button {
+  float: left;
+  display: inline-block;
+  border-width: 50%;
+  text-align: center;
+  background-color: #EBEBEB;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+}
+
+.second-interval-button {
+  float: left;
+  display: inline-block;
+  background-color: #1C5D91;
+  color: #F6F6F6;
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+.sentinels-div {
+  width: 50px;
+  height: 20px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .sentinels-div {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+  }
+}

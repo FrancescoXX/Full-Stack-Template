@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configuration1": "value1",
+  "test2": "atesting...",
+  
+  "colorsTheme": {
+    "silly": "rainbow",
+    "input": "grey",
+    "verbose": "cyan",
+    "prompt": "grey",
+    "info": "green",
+    "data": "grey",
+    "help": "cyan",
+    "warn": "yellow",
+    "debug": "blue",
+    "error": "red"
+  }
+}

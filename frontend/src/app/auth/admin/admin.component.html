@@ -1,0 +1,134 @@
+<div>
+  <button (click)="OnSelectFeature(0)" class="btn btn-info admin-button">READ</button>
+  <button (click)="OnSelectFeature(1)" class="btn btn-success admin-button">CREATE</button>
+  <button (click)="OnSelectFeature(2)" class="btn btn-primary admin-button">EDIT</button>
+  <button (click)="OnSelectFeature(3)" class="btn btn-danger admin-button">DELETE</button>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <app-coll-gs-cont></app-coll-gs-cont>
+  </div>
+
+  <!-- READ -->
+  <div *ngIf="featureSelected === 0" class="col-md-6">
+    <h2 class="btn-info text-center">Read COLLGS</h2>
+
+    <div class="list-group-item" style="border-radius: 5px;">
+      <form (ngSubmit)="OnCreateCollGS(f)" #f="ngForm" autocomplete="off">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="username" name="username" ngModel class="form-control" placeholder="Choose username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" ngModel class="form-control"
+            placeholder="Create a password">
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" ngModel class="form-control"
+            placeholder="confirm password">
+        </div>
+        <div class="form-group">
+          <label>CollGS</label>
+          <input type="text" id="collGS" name="collGS" ngModel class="form-control" placeholder="insert CollGS">
+        </div>
+        <div class="row">
+          <div style="margin:0 auto; width: 200px;" class="text-center">
+            <button class="btn btn-info btn-block" type="submit" [disabled]="!f.valid">Read collGS</button>
+          </div>
+        </div>
+        <br>
+      </form>
+    </div>
+  </div>
+
+  <!-- CREATE -->
+  <div *ngIf="featureSelected === 1" class="col-md-6">
+    <h2 class="btn-success text-white text-center">Create COLLGS</h2>
+    <!-- <div class="row">
+      <button style="float:right;" class="btn btn-danger" (click)="OnLogout()">Logout</button>
+      <button style="float:right;" class="btn btn-dark" (click)="TestWithToken()">Test with Token</button>
+      <button style="float:right;" class="btn btn-primary" (click)="OnGetAllCollGS()">Get All collGS</button>
+    </div> -->
+
+    <div class="list-group-item" style="border-radius: 5px;">
+      <form (ngSubmit)="OnCreateCollGS(f)" #f="ngForm" autocomplete="off">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="username" name="username" ngModel class="form-control" placeholder="Choose username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" ngModel class="form-control"
+            placeholder="Create a password">
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" ngModel class="form-control"
+            placeholder="confirm password">
+        </div>
+        <div class="form-group">
+          <label>CollGS</label>
+          <input type="text" id="collGS" name="collGS" ngModel class="form-control" placeholder="insert CollGS">
+        </div>
+        <div class="row">
+          <div style="margin:0 auto; width: 200px;" class="text-center">
+            <button class="btn btn-success btn-block" type="submit" [disabled]="!f.valid">Create collGS</button>
+          </div>
+        </div>
+        <br>
+      </form>
+    </div>
+  </div>
+
+  <!-- UPDATE -->
+  <div *ngIf="featureSelected === 2" class="col-md-6">
+    <h2 class="btn-primary text-center">Update COLLGS</h2>
+    <!-- <div class="row">
+      <button style="float:right;" class="btn btn-danger" (click)="OnLogout()">Logout</button>
+      <button style="float:right;" class="btn btn-dark" (click)="TestWithToken()">Test with Token</button>
+      <button style="float:right;" class="btn btn-primary" (click)="OnGetAllCollGS()">Get All collGS</button>
+    </div> -->
+
+    <div class="list-group-item" style="border-radius: 5px;">
+      <form (ngSubmit)="OnCreateCollGS(f)" #f="ngForm" autocomplete="off">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="username" name="username" ngModel class="form-control" placeholder="Choose username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" ngModel class="form-control"
+            placeholder="Create a password">
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" ngModel class="form-control"
+            placeholder="confirm password">
+        </div>
+        <div class="form-group">
+          <label>CollGS</label>
+          <input type="text" id="collGS" name="collGS" ngModel class="form-control" placeholder="insert CollGS">
+        </div>
+        <div class="row">
+          <div style="margin:0 auto; width: 200px;" class="text-center">
+            <button class="btn btn-primary btn-block" type="submit" [disabled]="!f.valid">Update collGS</button>
+          </div>
+        </div>
+        <br>
+      </form>
+    </div>
+  </div>
+
+  <!-- DELETE  -->
+  <div *ngIf="featureSelected === 3" class="col-md-6">
+    <h2 class="btn-danger text-center">Delete COLLGS</h2>
+    <div>Are you sure do you want to delete?</div>
+    <div class="text-right">
+      <button class="btn btn-default admin-button">Cancel</button>
+      <button class="btn btn-danger text-black admin-button">Delete</button>
+    </div>
+  </div>
+</div>

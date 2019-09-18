@@ -1,0 +1,32 @@
+/*Import custom font*/
+
+@font-face {
+  font-family: NotesEsaReg;
+  src: url(../assets/fonts/NotesEsaReg.otf)
+}
+
+/*CSS for all component */
+
+:host {
+  font-family: 'NotesEsaReg';
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: white;
+  z-index: 2000;
+}
+
+.bg {
+  background: url('../assets/images/world.png') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 0px;
+  margin: 0;
+}

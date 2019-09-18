@@ -1,0 +1,45 @@
+@font-face {
+  font-family: NotesEsaReg;
+  src: url(../../../assets/fonts/NotesEsaReg.otf)
+}
+
+:host {
+  display: none;
+  font-family: 'NotesEsaReg';
+}
+
+.app-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  /* z-index must be higher than .jw-modal-background */
+  overflow: auto;
+  /* enables scrolling for tall modals */
+}
+
+.app-modal .app-modal-body {
+  /*Modal CSS for application*/
+  padding: 20px;
+  margin: 25px 40px;
+  background-color: #fdfdfd;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.app-modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* semi-transparent black  */
+  background-color: #000;
+  opacity: 0.50;
+  z-index: 1900;
+  /* z-index must be below .jw-modal and above everything else  */
+}

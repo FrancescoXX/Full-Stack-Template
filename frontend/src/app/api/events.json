@@ -1,0 +1,404 @@
+[
+  {
+    "startdate": "2018-07-31 08:09:00+00:00",
+    "stopdate": "2018-07-31 09:28:00+00:00",
+    "publicationdate": "2018-08-02 08:32:18.329504+00:00",
+    "title": "Unscheduled Infrastructure Maintenance on 31 July 2018",
+    "description": "Users are informed that, due to an unscheduled infrastructure maintenance, the following services were unavailable today, from 08:15 to 09:28 UTC:<br>   * Copernicus Open Access Hub (https://scihub.copernicus.eu) (also including API Hub, Sentinel-3A Pre-operations Data Hub and GNSS Rinex Pre-operational Hub)<br>   * Collaborative Data Hub - Node 1 (https://colhub.copernicus.eu/dhus)<br>   * Copernicus Services Data Hub (https://cophub.copernicus.eu/dhus) <br>The maintenance is now over and services back to nominal operations.<br><br>We apologise for the inconvenience this might have caused to your activities.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00361",
+    "category": "Other",
+    "subcategory": "Infrastructure Maintenance",
+    "service": "true",
+    "hub_tag": [
+      "Scientific Data Hub"
+    ],
+    "mission_tag": [
+      null
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-07-31 08:09:00+00:00",
+    "stopdate": "2018-07-31 09:28:00+00:00",
+    "publicationdate": "2018-08-02 08:36:18.47831+00:00",
+    "title": "Unscheduled Infrastructure Maintenance on 31 July 2018",
+    "description": "Users are informed that, due to an unscheduled infrastructure maintenance, the following services were unavailable today, from 08:15 to 09:28 UTC:<br>   * Copernicus Open Access Hub (https://scihub.copernicus.eu) (also including API Hub, Sentinel-3A Pre-operations Data Hub and GNSS Rinex Pre-operational Hub)<br>   * Collaborative Data Hub - Node 1 (https://colhub.copernicus.eu/dhus)<br>   * Copernicus Services Data Hub (https://cophub.copernicus.eu/dhus)<br>The maintenance is now over and services back to nominal operations.<br><br>We apologise for the inconvenience this might have caused to your activities.",
+    "icon": "https://cophub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://cophub.copernicus.eu/news/News00210",
+    "category": "Other",
+    "subcategory": "Infrastructure Maintenance",
+    "service": "true",
+    "hub_tag": [
+      "Copernicus Services Hub"
+    ],
+    "mission_tag": [
+      null
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-08-04 08:30:00+00:00",
+    "stopdate": "2018-08-05 08:30:00+00:00",
+    "publicationdate": "2018-08-08 14:42:52.626863+00:00",
+    "title": "Sentinel-5P missing NRT and OFFL product generation",
+    "description": "Due to anomalies in the ground segment acquisition stations between Saturday ( 04/08) and Sunday (05/08) no Sentinel-5P data (NRT and OFFL) will be generated for orbits from 4187 to 4192 and 4199 to 4205",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/news-s5p-warning.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00365",
+    "category": "Product",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      null
+    ],
+    "mission_tag": [
+      "Sentinel-5P"
+    ],
+    "instrument_tag": [
+      "TROPOMI"
+    ]
+  },
+  {
+    "startdate": "2018-08-21 07:15:22+00:00",
+    "stopdate": "2018-08-21 09:16:41+00:00",
+    "publicationdate": "2018-08-27 15:21:38.64435+00:00",
+    "title": "Maintenance on CopHub: 20-21 August 2018",
+    "description": "Copernicus Access Hub users are informed that a maintenance activity is scheduled on the 20th and 21st of August 2018 for upgrading the DHuS databases.<br>During the maintenance the service will be accessible for search and downloads with the exception of a downtime window of about two hours on the 21st of August starting from 9:00 UTC.<br>During this period, fresh data will continue to be regularly published on the Open Access Hub.<br>Publication backlog will be gradually recovered during the hours following the conclusion of the maintenance.<br>We apologize for the inconvenience that this might cause to your activity. ",
+    "icon": "https://cophub.copernicus.eu/twiki/pub/CopHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://cophub.copernicus.eu/news/News00214",
+    "category": "Other",
+    "subcategory": "Infrastructure Maintenance",
+    "service": "true",
+    "hub_tag": [
+      "Copernicus Services Hub"
+    ],
+    "mission_tag": [
+      null
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-08-28 08:50:00+00:00",
+    "stopdate": "2018-08-28 13:55:00+00:00",
+    "publicationdate": "2018-08-29 13:56:09.539696+00:00",
+    "title": "Sentinel-3A SLSTR data unavailability on 28 August 2018",
+    "description": "Due to a Sentinel-3A planned SLSTR instrument maintenance activity all NRT/NTC L1 and L2 user products covering a sensing time from 08:50 to 13:55 UTC on 28 August 2018 are unavailable. ",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/s-3a_warning.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00373",
+    "category": "Satellite",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      "Scientific Data Hub"
+    ],
+    "mission_tag": [
+      "Sentinel-3"
+    ],
+    "instrument_tag": [
+      "SLSTR"
+    ]
+  },
+  {
+    "startdate": "2018-08-22 11:23:00+00:00",
+    "stopdate": "2018-08-22 13:04:00+00:00",
+    "publicationdate": "2018-08-29 14:14:38.303557+00:00",
+    "title": "Sentinel-3A data unavailability on 22 August 2018",
+    "description": "Due to a ground segment anomaly that occurred on 22 August 2018 at approximately 13:00 UTC, all Sentinel-3A NRT/NTC/STC L1 and L2 user data covering a sensing time from 11:23 UTC to 13:04 UTC are unavailable.<br><br>The absolute sensing orbits impacted are 13086 and 13087, relative orbits 23 and 24 of cycle 35.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/s-3a_warning.png",
+    "externalurl": "https://inthub.copernicus.eu/news/News00201",
+    "category": "Ground Segment",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      "International Access Hub"
+    ],
+    "mission_tag": [
+      "Sentinel-3"
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-08-22 11:23:00+00:00",
+    "stopdate": "2018-08-22 13:04:00+00:00",
+    "publicationdate": "2018-08-29 14:16:57.175968+00:00",
+    "title": "Sentinel-3A data unavailability on 22 August 2018",
+    "description": "Due to a ground segment anomaly that occurred on 22 August 2018 at approximately 13:00 UTC, all Sentinel-3A NRT/NTC/STC L1 and L2 user data covering a sensing time from 11:23 UTC to 13:04 UTC are unavailable.<br><br>The absolute sensing orbits impacted are 13086 and 13087, relative orbits 23 and 24 of cycle 35.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/s-3a_warning.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00374",
+    "category": "Ground Segment",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      "Scientific Data Hub"
+    ],
+    "mission_tag": [
+      "Sentinel-3"
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-08-22 11:23:00+00:00",
+    "stopdate": "2018-08-22 13:04:00+00:00",
+    "publicationdate": "2018-08-29 14:18:55.002579+00:00",
+    "title": "Sentinel-3A data unavailability on 22 August 2018",
+    "description": "Due to a ground segment anomaly that occurred on 22 August 2018 at approximately 13:00 UTC, all Sentinel-3A NRT/NTC/STC L1 and L2 user data covering a sensing time from 11:23 UTC to 13:04 UTC are unavailable.<br><br>The absolute sensing orbits impacted are 13086 and 13087, relative orbits 23 and 24 of cycle 35.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/s-3a_warning.png",
+    "externalurl": "https://cophub.copernicus.eu/news/News00218",
+    "category": "Ground Segment",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      "Copernicus Services Hub"
+    ],
+    "mission_tag": [
+      "Sentinel-3"
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-08-22 11:23:00+00:00",
+    "stopdate": "2018-08-22 13:04:00+00:00",
+    "publicationdate": "2018-08-29 14:20:33.53032+00:00",
+    "title": "Sentinel-3A data unavailability on 22 August 2018",
+    "description": "Due to a ground segment anomaly that occurred on 22 August 2018 at approximately 13:00 UTC, all Sentinel-3A NRT/NTC/STC L1 and L2 user data covering a sensing time from 11:23 UTC to 13:04 UTC are unavailable.<br><br>The absolute sensing orbits impacted are 13086 and 13087, relative orbits 23 and 24 of cycle 35.<br>",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/s-3a_warning.png",
+    "externalurl": "https://colhub.copernicus.eu/news/News00243",
+    "category": "Ground Segment",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      "Collaborative Data Hub"
+    ],
+    "mission_tag": [
+      "Sentinel-3"
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-08-28 08:21:09+00:00",
+    "stopdate": "2018-08-28 09:35:31+00:00",
+    "publicationdate": "2018-08-31 08:18:50.865696+00:00",
+    "title": "Open Access Hub Maintenance on 27-28 August 2018",
+    "description": "Open Access Hub users are informed that a maintenance activity is scheduled on the 27th and 28th of August 2018 for upgrading the DHuS databases and software version on the following access points:<br>-SciHub<br>-ApiHub<br>Publication of fresh data will be temporarily suspended for 24 hours starting from Monday, 27-Aug-2018, 13:00 UTC, until Tuesday, 28-Aug-2018, 15:00 UTC.<br><br>A temporary access hub will be activated for providing access to the last two weeks of Sentinel Data without registration. The temporary data hub will be available at the following address:<br>https://tmphub.copernicus.eu/dhus<br><br>During the maintenance period the service will be accessible for search and downloads with the exception of a downtime period of about 3 hours on the 28th of August starting from 9:00 UTC. New user registrations will be also temporarily suspended. <br>Registered users will not be able to change their profile credentials (e.g password, e-mail).<br><br>Users are also informed that their shopping carts will be emptied.<br>Publication backlog will be gradually recovered during the hours following the conclusion of the maintenance.<br><br>We apologize for the inconvenience that this might cause to your activity.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00370",
+    "category": "Other",
+    "subcategory": "Infrastructure Maintenance",
+    "service": "true",
+    "hub_tag": [
+      "Scientific Data Hub"
+    ],
+    "mission_tag": [
+      null
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-08-11 14:47:51+00:00",
+    "stopdate": "2018-08-12 11:37:11+00:00",
+    "publicationdate": "2018-08-31 13:41:27.502119+00:00",
+    "title": "Removal from DataHub catalog of S2A products affected by geolocation error (orbit range 16381 - 16392)",
+    "description": "Following the collision avoidance manoeuvre performed on the 12/08/2018, the S2A products with sensing orbit in the range 16381 - 16392 have been noted with a wrong geolocation (see the news: https://cophub.copernicus.eu/news/News00215 published on 27 August). The L1C and L2A products impacted by the anomaly have been removed from the DataHub catalogue. You can find here (https://scihub.copernicus.eu/S2A_deletion_20180830.csv) the list of the products removed from the catalogue.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/s-2a_warning.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00376",
+    "category": "Product",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      "Copernicus Services Hub",
+      "Scientific Data Hub"
+    ],
+    "mission_tag": [
+      "Sentinel-2"
+    ],
+    "instrument_tag": [
+      "MSI"
+    ]
+  },
+  {
+    "startdate": "2018-08-11 08:30:00+00:00",
+    "stopdate": "2018-08-12 23:59:59+00:00",
+    "publicationdate": "2018-09-05 12:57:15.696592+00:00",
+    "title": "Sentinel-5P data unavailability, orbits 4286 to 4797 and 4336",
+    "description": "Due to a spacecraft collision avoidance manoeuvre starting on 11 August 2018, data from orbit 4286 are only partial acquired and data from orbit 4287 to 4297 are not acquired. Related NRT and OFFL data cannot be generated.<br>Due to a ground segment anomaly on 14 August 2018 data from orbit 4336 were not processed in NRT, they will be subsequently processed in the OFFL. ",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/news-s5p-warning.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00369",
+    "category": "Product",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      null
+    ],
+    "mission_tag": [
+      "Sentinel-5P"
+    ],
+    "instrument_tag": [
+      "TROPOMI"
+    ]
+  },
+  {
+    "startdate": "2018-09-13 12:00:00+00:00",
+    "stopdate": "2018-09-17 12:00:00+00:00",
+    "publicationdate": "2018-09-18 11:47:53.245075+00:00",
+    "title": "Sentinel-3A data unavailability in September 2018",
+    "description": "Due to decontamination activities of the Sentinel-3 SLSTR instrument, production of the following data will be affected:<br><br>VIS channels will not be available from 12:00 on 13 September to 12:00 on 17 September<br>IR channels will not be available from 12:00 on 13 September to 12:00 on 19 September<br><br>It is expected that there will be no production from 13 to 17 September, and that products from 17 to 19 September may be degraded.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/s-3a_warning.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00383",
+    "category": "Product",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      null
+    ],
+    "mission_tag": [
+      "Sentinel-3"
+    ],
+    "instrument_tag": [
+      "SLSTR"
+    ]
+  },
+  {
+    "startdate": "2018-09-05 19:30:00+00:00",
+    "stopdate": "2018-09-06 06:06:00+00:00",
+    "publicationdate": "2018-09-18 11:58:56.02969+00:00",
+    "title": "S3A Data Unavailability on 5 September 2018",
+    "description": "Due to a major Sentinel-3A Ground Segment anomaly all L1 and L2 NRT OLC, SLSTR and SRAL user products from sensing time 05-09-2018 19:30 to 06-09-2018 06:06 UTC are missing.<br><br>Investigation on root cause is on-going ",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/s-3a_warning.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00381",
+    "category": "Product",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      null
+    ],
+    "mission_tag": [
+      "Sentinel-3"
+    ],
+    "instrument_tag": [
+      "OLCI",
+      "SLSTR",
+      "SRAL"
+    ]
+  },
+  {
+    "startdate": "2018-09-18 06:30:00+00:00",
+    "stopdate": "2018-09-18 16:30:00+00:00",
+    "publicationdate": "2018-09-21 08:15:58.363266+00:00",
+    "title": "Infrastructure maintenance activities on Tuesday 18 and Wednesday 19 September 2018",
+    "description": "Infrastructure maintenance activities are scheduled on:<br><br>-   Tuesday, 18 September 2018<br>-   Wednesday, 19 September 2018<br>The maintenance will affect the Data Hub Services according to the following schedule:<br><br>-   Copernicus Open Access Hub (also including API Hub, Sentinel-3 Pre-operations Data Hub and GNSS Rinex Pre-operational Hub)<br>-   Collaborative Data Hub - Node 1<br>The Collaborative Data Hub - Node 2 and Node 3 will continue to be accessible to their registered users.<br><br>Wednesday, 19 September 2018 from 06:00 to 16:30 UTC:<br>-   Copernicus Services Data Hub<br>-   Sentinel-3A Pre-operations Data Hub<br><br>During the maintenance windows service interruptions might occur.<br>We apologize for any inconvenience caused.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00385",
+    "category": "Other",
+    "subcategory": "Infrastructure Maintenance",
+    "service": "true",
+    "hub_tag": [
+      "Scientific Data Hub"
+    ],
+    "mission_tag": [
+      null
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-09-19 06:30:00+00:00",
+    "stopdate": "2018-09-19 16:30:00+00:00",
+    "publicationdate": "2018-09-21 08:32:15.676038+00:00",
+    "title": "Infrastructure maintenance activities on Tuesday 18 and Wednesday 19 September  2018",
+    "description": "Infrastructure maintenance activities are scheduled on:<br><br>-   Tuesday, 18 September 2018<br>-   Wednesday, 19 September 2018<br><br>The maintenance will affect the Data Hub Services according to the following schedule:<br><br>-   Copernicus Open Access Hub (also including API Hub, Sentinel-3 Pre-operations Data Hub and GNSS Rinex Pre-operational Hub)<br>-   Collaborative Data Hub - Node 1<br><br>The Collaborative Data Hub - Node 2 and Node 3 will continue to be accessible to their registered users.<br>Wednesday, 19 September 2018 from 06:00 to 16:30 UTC:<br><br>-   Copernicus Services Data Hub<br>-   Sentinel-3A Pre-operations Data Hub<br><br>During the maintenance windows service interruptions might occur.<br>We apologize for any inconvenience caused.",
+    "icon": "https://cophub.copernicus.eu/twiki/pub/CopHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://cophub.copernicus.eu/news/News00227",
+    "category": "Other",
+    "subcategory": "Infrastructure Maintenance",
+    "service": "true",
+    "hub_tag": [
+      "Copernicus Services Hub"
+    ],
+    "mission_tag": [
+      null
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-09-25 14:03:28+00:00",
+    "stopdate": "2018-09-25 14:57:05+00:00",
+    "publicationdate": "2018-09-27 14:51:01.044773+00:00",
+    "title": "Infrastructure maintenance activities on Tuesday 18 and Wednesday 19 September  2018",
+    "description": "Users are informed that due to a Service Maintenance on Cop Hub database, the service will not be available today, Tuesday 25 September, from 13:00 to 14:00 UTC.<br>We apologize for the short notice.",
+    "icon": "https://cophub.copernicus.eu/twiki/pub/CopHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://cophub.copernicus.eu/news/News00230",
+    "category": "Other",
+    "subcategory": "Infrastructure Maintenance",
+    "service": "true",
+    "hub_tag": [
+      "Copernicus Services Hub"
+    ],
+    "mission_tag": [
+      null
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-10-16 03:00:00+00:00",
+    "stopdate": "2018-10-16 10:00:00+00:00",
+    "publicationdate": "2018-10-17 13:11:50.809528+00:00",
+    "title": "Unscheduled  Temporary Downtime of the International Hub Service  (16 October 2018 from 03:00  to 10:00 UTC)",
+    "description": "Users are informed that the International Access Hub has been temporarily unreachable on 16 October 2018 from 03:00 to 10:00 UTC, due to an infrastructure issue at the data centre hosting the service. <br>We apologise for the inconvenience this might have caused to your activities. ",
+    "icon": "https://inthub.copernicus.eu/twiki/pub/IntHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://inthub.copernicus.eu/news/News00219",
+    "category": "Other",
+    "subcategory": "Outage",
+    "service": "true",
+    "hub_tag": [
+      "International Access Hub"
+    ],
+    "mission_tag": [
+      null
+    ],
+    "instrument_tag": [
+      null
+    ]
+  },
+  {
+    "startdate": "2018-10-16 03:00:00+00:00",
+    "stopdate": "2018-10-16 10:00:00+00:00",
+    "publicationdate": "2018-10-17 13:15:14.873692+00:00",
+    "title": "Sentinel-5P Pre-operational Data Hub temporary unavailability (16 October 2018 from 03:00 to 10:00 UTC)",
+    "description": "Users are informed that the Sentinel-5P Pre-operational Data Hub has been temporarily unavailable on 16 October 2018 from 03:00 to 10:00 UTC, due to an infrastructure issue at the data centre hosting the service. During the downtime window the publication of Sentinel-5P data has been delayed.<br>We apologise for the inconvenience this might have caused to your activities.",
+    "icon": "https://scihub.copernicus.eu/twiki/pub/SciHubNews/NewsIcons/maintenance.png",
+    "externalurl": "https://scihub.copernicus.eu/news/News00405",
+    "category": "Product",
+    "subcategory": null,
+    "service": "false",
+    "hub_tag": [
+      null
+    ],
+    "mission_tag": [
+      "Sentinel-5P"
+    ],
+    "instrument_tag": [
+      "TROPOMI"
+    ]
+  }
+]

@@ -1,0 +1,997 @@
+<div class="container " style="left:0px; position:absolute; width:100%">
+  <div class="migration-buttons-container" id="migration-buttons-container">
+    <div
+      style="position: absolute; left: 0px; color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 36px; text-align: center; letter-spacing: 0px; text-decoration: none; vertical-align: middle; padding: 0px; width: 100%; height: 58px; white-space: nowrap; ">
+      <br />
+      <div>Mission Facts</div>
+      <div
+        style="stroke: none; color: rgb(170, 170, 170); font-weight: 400; font-style: normal; font-size: 24px; text-align: center; letter-spacing: 0px; text-decoration: none; vertical-align: middle; padding: 0px; width: 100%; height: 58px; white-space: nowrap;">
+        Click on a mission
+      </div>
+    </div>
+    <div class="row migration-buttons-row"
+      style="position:absolute;top:250px;right: 0px;left: 0px;padding-left: 250px;padding-right: 250px;">
+      <div class="col-md-3 col-mission-facts-button">
+        <div (click)="OnSelectMission(1)" class="mission-facts-button">
+          <img class="sentinels-image" src="../../assets/images/sentinels/s-1a_black.png">
+          <div class="mission-facts-label">Sentinel-1</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-mission-facts-button">
+        <div (click)="OnSelectMission(2)" class="mission-facts-button">
+          <img class="sentinels-image" src="../../assets/images/sentinels/s-2a_black.png">
+          <div class="mission-facts-label">Sentinel-2</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-mission-facts-button">
+        <div (click)="OnSelectMission(3)" class="mission-facts-button">
+          <img class="sentinels-image" src="../../assets/images/sentinels/sentinel-3.png">
+          <div class="mission-facts-label">Sentinel-3</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-mission-facts-button">
+        <div (click)="OnSelectMission(5)" class="mission-facts-button">
+          <img class="sentinels-image" src="../../assets/images/sentinels/sentinel5p.png">
+          <div class="mission-facts-label">Sentinel-5P</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modal id="custom-modal-1">
+
+  <!-- Modal Top -->
+  <div class="mymodal-top">
+    <button (click)="closeModal('custom-modal-1');" type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title" id="myModalLabel">aEvents Details</h4>
+    <div class="calendar-date-detail calendar-date-detail-events">
+    </div>
+  </div>
+
+  <!-- Modal Mid -->
+  <div class="mymodal-mid">
+    <div class="panel-body">
+      <div class="modal fade bd-example-modal-lg" id="disseminationstats-container" tabindex="-1" role="dialog"
+        data-backdrop="true" keyboard="true" aria-labelledby="disseminationstatsContainerLabel" aria-hidden="true">
+        <div id="disseminationstats-dialog" class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
+              <ul class="nav nav-tabs">
+                <li id="mission-dissemination-tab-button" class="active"><a href="#">Mission dissemination</a></li>
+                <li id="top-countries-per-downloads-tab-button"><a href="#">Top 10 countries per downloads</a></li>
+                <li id="publication-timeliness-tab-button"><a href="#">Publication timeliness</a></li>
+              </ul>
+            </div>
+            <div id="disseminationstats-body" class="modal-body">
+              <div class="col-sm-2 col-sm-offset-5 text-center" style="margin-top: 0px;">
+                <div class="btn-group">
+                  <button id="missionMenu" type="button" class="btn btn-default" data-toggle="dropdown"
+                    aria-pressed="false" aria-haspopup="true" title="Select a Mission"><img id="selectedMissionImage"
+                      class="image-volume-class" />&nbsp;
+                    <span id="selectedMission" class="menuTitleClass"></span>&nbsp;<span class="caret"></span></button>
+                  <ul class="dropdown-menu scrollable-menu" aria-labelledby="missionMenu">
+                    <li><a href="#" class="missionMenuItem" data-name="Sentinel-1"
+                        data-img="images/sentinels/s-1a_black.png">&nbsp;<img src="../../assets/images/sentinels/s-1a_black.png"
+                          class="image-volume-class" />Sentinel-1</a></li>
+                    <li><a href="#" class="missionMenuItem" data-name="Sentinel-2"
+                        data-img="images/sentinels/s-2a_black.png">&nbsp;<img src="../../assets/images/sentinels/s-2a_black.png"
+                          class="image-volume-class" />Sentinel-2</a></li>
+                    <li><a href="#" id="sentinel3MenuItem" class="missionMenuItem" data-name="Sentinel-3"
+                        data-img="images/sentinels/sentinel-3.png"><img src="../../assets/images/sentinels/sentinel-3.png"
+                          class="image-volume-class" />Sentinel-3</a></li>
+                    <li><a style="padding-left:15px;" href="#" id="sentinel5PMenuItem" class="missionMenuItem"
+                        data-name="Sentinel-5P" data-img="../../assets/images/sentinels/sentinel5p.png">&nbsp;<img
+                          src="../../assets/images/sentinels/sentinel5p.png" class="image-volume-class" />Sentinel-5P</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div id="mission-facts-page-container-sentinel">
+                <div id="mission-dissemination-container">
+                  <div style="border: 1px solid #ddd; border-bottom-color: transparent;">
+                    <div class="container-fluid">
+                      <div class="row"></div>
+                      <div class="switch-button-mission-facts">
+                        <div class="volume-first-interval-button">Last month</div>
+                        <div class="volume-second-interval-button">Last 3 months</div>
+                      </div>
+                      <div style='float:right; width: 132px;'>
+                        <div class="volume-number-switch-mission-facts">
+                          <div class="volume-switch-button">Number</div>
+                          <div class="number-switch-button">Volume</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div id="page3Panel1" style="margin-bottom: 20px;">
+                            <br />
+                            <p style="font-size: 25px;color: black; margin: 0px">
+                              Published Products
+                              <br>
+                              <div style="display: none; margin-top: 50px;"
+                                id="sentinel-3-increase-decrease-published-label">
+                                <div class="row">
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><span class="time-interval-label">OLCI</span>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><span class="time-interval-label">SLSTR</span>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><span class="time-interval-label">SRAL</span>
+                                  </div>
+                                  <div class="col-md-3 col-sm- col-xs-3"><span
+                                      class="time-interval-label">SYNERGY</span></div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-3 col-sm-3 col-xs-3 s3-md-published-title">
+                                    <label id="publishedtotal_olci">---</label></div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3 s3-md-published-title">
+                                    <label id="publishedtotal_slstr">---</label></div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3 s3-md-published-title">
+                                    <label id="publishedtotal_sral">---</label></div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3 s3-md-published-title">
+                                    <label id="publishedtotal_synergy">---</label></div>
+                                </div>
+                              </div>
+                              <div class="row" id="other-mission-increase-decrease-published-label">
+                                <label id="publishedtotal" style="font-size: 30px;color: #337ab7;">---</label>
+                              </div>
+                              <div class="increase_decrease_period increase-decrease">
+                                Increase/decrease (last 3 months)
+                              </div>
+                              <br />
+                              <div class="row" style="display: none" id="sentinel-3-increase-decrease-published">
+                                <div style="padding: 0%;" class="col-md-3 col-sm-3 col-xs-3">
+                                  <div class="pie-published-olci  pie-chart-container-mission-facts-s3">
+                                  </div>
+                                </div>
+                                <div style="padding: 0%;" class="col-md-3 col-sm-3 col-xs-3">
+                                  <div class="pie-published-slstr  pie-chart-container-mission-facts-s3">
+                                  </div>
+                                </div>
+                                <div style="padding: 0%;" class="col-md-3 col-sm-3 col-xs-3">
+                                  <div class="pie-published-sral pie-chart-container-mission-facts-s3">
+                                  </div>
+                                </div>
+                                <div style="padding: 0%;" class="col-md-3 col-sm-3 col-xs-3">
+                                  <div class="pie-published-synergy pie-chart-container-mission-facts-s3">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row" id="other-mission-increase-decrease-published">
+                                <div class="col-md-12 pie-published  pie-chart-container-mission-facts">
+                                </div>
+                              </div>
+                            <div class="big-pie-chart">
+                              <canvas id="published" width="260" height="150"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div id="page3Panel2">
+                            <br />
+                            <p style="font-size: 25px;color: black; margin: 0px">
+                              Downloads
+                              <br>
+                              <div style="display: none;margin-top: 50px;"
+                                id="sentinel-3-increase-decrease-download-label">
+                                <div class="row" style="text-align:center;">
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><span class="time-interval-label">OLCI</span>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><span class="time-interval-label">SLSTR</span>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><span class="time-interval-label">SRAL</span>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><span
+                                      class="time-interval-label">SYNERGY</span></div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><label id="downloadtotal_olci"
+                                      style="font-size: 20px;color: #337ab7;">---</label>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><label id="downloadtotal_slstr"
+                                      style="font-size: 20px;color: #337ab7;">---</label>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><label id="downloadtotal_sral"
+                                      style="font-size: 20px;color: #337ab7;">---</label>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3 col-xs-3"><label id="downloadtotal_synergy"
+                                      style="font-size: 20px;color: #337ab7;">---</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row" id="other-mission-increase-decrease-download-label">
+                                <label id="downloadtotal" style="font-size: 30px;color: #337ab7;">---</label>
+                              </div>
+                              <div class="increase_decrease_period increase-decrease">
+                                Increase/decrease (last 3 months)
+                              </div>
+                              <br />
+                              <div class="row" style="display: none" id="sentinel-3-increase-decrease-download">
+                                <div style="padding: 0%;" class="col-md-3 col-sm-3 col-xs-3">
+                                  <div class="pie-download-olci pie-chart-container-mission-facts-s3">
+                                  </div>
+                                </div>
+                                <div style="padding: 0%;" class="col-md-3 col-sm-3 col-xs-3">
+                                  <div class="pie-download-slstr pie-chart-container-mission-facts-s3">
+                                  </div>
+                                </div>
+                                <div style="padding: 0%;" class="col-md-3 col-sm-3 col-xs-3">
+                                  <div class="pie-download-sral pie-chart-container-mission-facts-s3">
+                                  </div>
+                                </div>
+                                <div style="padding: 0%;" class="col-md-3 col-sm-3 col-xs-3">
+                                  <div class="pie-download-synergy pie-chart-container-mission-facts-s3">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row" id="other-mission-increase-decrease-download">
+                                <div class="col-md-12 pie-download  pie-chart-container-mission-facts">
+                                </div>
+                              </div>
+                            <div class="big-pie-chart">
+                              <canvas id="download" width="260" height="150"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                          <div class="flipswitch">
+                            <input type="checkbox" name="flipswitch" class="flipswitch-cb" id="fs">
+                            <label class="flipswitch-label" for="fs">
+                              <div class="flipswitch-inner" id="Number"></div>
+                              <div class="flipswitch-switch" id="Volume"></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="mission-countries-container" style="display:none">
+                  <div class="container-fluid">
+
+                    <!-- logo here -->
+                    <div class="row">
+                      <div class="col-sm-2 col-sm-offset-5 text-center" style="margin-top: 0px;"></div>
+                    </div>
+                    <div class="row top_countries_label">Top 10 Countries per number of downloads in the last
+                      month alphabetically ordered per continent</div>
+                    <div class="row" id="other-mission-country-map">
+                      <div class="container">
+
+                        <!-- EUROPE -->
+                        <div id="europe" class="row rowMap row-xy continent-container">
+                          <div class="col-md-4" style="text-align:center;font-size: 42px;color:#0098DB">
+                            Europe</div>
+                          <div class="col-md-3">
+                            <br>
+                            <div style="text-align:center;"><img class="imgMap" src="../../assets/images/europe.png" /></div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="s1-s2-top-ten-list">
+                              <div id="europe-countries" class="country-list-container"
+                                style="color:#0098DB;text-align:left;padding-left:30%;font-size: 18px;">
+                              </div>
+                            </div>
+                            <div class="s3-top-ten-list">
+                              <div style="text-align:center;font-size: 18px;">
+                                <div>
+                                  <div class="row top-ten-list">
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label europe-olci">OLCI</span>
+                                      <div id="europe-olci-s3-countries"
+                                        class="country-list-container countries-align europe-color">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label europe-slstr">SLSTR</span>
+                                      <div id="europe-slstr-s3-countries"
+                                        class="country-list-container countries-align europe-color">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label europe-sral">SRAL</span>
+                                      <div id="europe-sral-s3-countries"
+                                        class="country-list-container countries-align europe-color">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ASIA -->
+                        <div id="asia" class="row rowMap row-xy continent-container">
+                          <div class="col-md-4">
+                            <div style="text-align:center;font-size: 42px;color:#e37222">Asia</div>
+                          </div>
+                          <div class="col-md-3">
+                            <div style="text-align:center; margin-top: 20px;"><img class="imgMap"
+                                src="../../assets/images/asia.png" /></div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="s1-s2-top-ten-list">
+                              <div id="asia-countries"
+                                style="color:#e37222;text-align:left;;padding-left:30%;font-size: 18px;">
+                              </div>
+                            </div>
+                            <div class="s3-top-ten-list">
+                              <div style="text-align:center;font-size: 18px;">
+                                <div>
+                                  <div class="row top-ten-list">
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label asia-olci">OLCI</span>
+                                      <div id="asia-olci-s3-countries" class="country-list-container countries-align"
+                                        style="color:#e37222;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label asia-slstr">SLSTR</span>
+                                      <div id="asia-slstr-s3-countries" class="country-list-container countries-align"
+                                        style="color:#e37222;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label asia-sral">SRAL</span>
+                                      <div id="asia-sral-s3-countries" class="country-list-container countries-align"
+                                        style="color:#e37222;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- NORTH AMERICA -->
+                        <div id="north-america" class="row rowMap row-xy continent-container">
+                          <div class="col-md-4">
+                            <div style="text-align:center;font-size: 42px;color:#008542">North America
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div style="text-align:center; margin-top: 20px;"><img class="imgMap"
+                                src="../../assets/images/northamerica.png" /></div>
+                          </div>
+                          <div class="col-md-5  ">
+                            <div class="s1-s2-top-ten-list">
+                              <div id="north-america-countries"
+                                style="color:#008542;text-align:left;;padding-left:30%;font-size: 18px;">
+                              </div>
+                            </div>
+                            <div class="s3-top-ten-list">
+                              <div style="text-align:center;font-size: 18px;">
+                                <div>
+                                  <div class="row top-ten-list">
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label north-america-olci">OLCI</span>
+                                      <div id="north-america-olci-s3-countries"
+                                        class="country-list-container countries-align" style="color:#008542;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label north-america-slstr">SLSTR</span>
+                                      <div id="north-america-slstr-s3-countries"
+                                        class="country-list-container countries-align" style="color:#008542;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label north-america-sral">SRAL</span>
+                                      <div id="north-america-sral-s3-countries"
+                                        class="country-list-container countries-align" style="color:#008542;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- SOUTH AMERICA AND ANTARCTICA -->
+                        <div id="south-america-and-antarctica" class="row rowMap row-xy continent-container">
+                          <div class="col-md-4">
+                            <div style="text-align:center;font-size: 42px;color:#D0103A">South America
+                              and Antarctica</div>
+                          </div>
+                          <div class="col-md-3">
+                            <div style="text-align:center; margin-top: 20px;"><img class="imgMap"
+                                src="../../assets/images/southamerica.png" /></div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="s1-s2-top-ten-list">
+                              <div id="south-america-and-antarctica-countries"
+                                style="color:#D0103A;text-align:left;;padding-left:30%;font-size: 18px;">
+                              </div>
+                            </div>
+                            <div class="s3-top-ten-list">
+                              <div style="text-align:center;font-size: 18px;">
+                                <div>
+                                  <div class="row top-ten-list">
+                                    <div class="col-md-4">
+                                      <span
+                                        class="top-ten-countries-instrument-label south-america-and-antarctica-olci">OLCI</span>
+                                      <div id="south-america-and-antarctica-olci-s3-countries"
+                                        class="country-list-container countries-align" style="color:#D0103A;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span
+                                        class="top-ten-countries-instrument-label south-america-and-antarctica-slstr">SLSTR</span>
+                                      <div id="south-america-and-antarctica-slstr-s3-countries"
+                                        class="country-list-container countries-align" style="color:#D0103A;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span
+                                        class="top-ten-countries-instrument-label south-america-and-antarctica-sral">SRAL</span>
+                                      <div id="south-america-and-antarctica-sral-s3-countries"
+                                        class="country-list-container countries-align" style="color:#D0103A;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- AFRICA -->
+                        <div id="africa" class="row rowMap row-xy continent-container">
+                          <div class="col-md-4">
+                            <div style="text-align:center;font-size: 42px;color:#FDC82F">Africa</div>
+                          </div>
+                          <div class="col-md-3">
+                            <div style="text-align:center; margin-top: 20px;"><img class="imgMap"
+                                src="../../assets/images/africa.png" /></div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="s1-s2-top-ten-list">
+                              <div id="africa-countries"
+                                style="color:#FDC82F;text-align:left;;padding-left:30%;font-size: 18px;">
+                              </div>
+                            </div>
+                            <div class="s3-top-ten-list">
+                              <div style="text-align:center;font-size: 18px;">
+                                <div>
+                                  <div class="row top-ten-list">
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label africa-olci">OLCI</span>
+                                      <div id="africa-olci-s3-countries" class="country-list-container countries-align"
+                                        style="color:#FDC82F;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label africa-slstr">SLSTR</span>
+                                      <div id="africa-slstr-s3-countries" class="country-list-container countries-align"
+                                        style="color:#FDC82F;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label africa-sral">SRAL</span>
+                                      <div id="africa-sral-s3-countries" class="country-list-container countries-align"
+                                        style="color:#FDC82F;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- AUSTRALIA -->
+                        <div id="australia" class="row rowMap row-xy continent-container">
+                          <div class="col-md-4">
+                            <div style="text-align:center;font-size: 42px;color:#00338D">Oceania</div>
+                          </div>
+                          <div class="col-md-3">
+                            <div style="text-align:center; margin-top: 20px;"><img class="imgMap"
+                                src="../../assets/images/australia.png" /></div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="s1-s2-top-ten-list">
+                              <div id="australia-countries"
+                                style="color:#00338D;text-align:left;;padding-left:30%;font-size: 18px;">
+                              </div>
+                            </div>
+                            <div class="s3-top-ten-list">
+                              <div style="text-align:center;font-size: 18px;">
+                                <div>
+                                  <div class="row top-ten-list">
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label australia-olci">OLCI</span>
+                                      <div id="australia-olci-s3-countries"
+                                        class="country-list-container countries-align" style="color:#00338D;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label australia-slstr">SLSTR</span>
+                                      <div id="australia-slstr-s3-countries"
+                                        class="country-list-container countries-align" style="color:#00338D;"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <span class="top-ten-countries-instrument-label australia-sral">Topography</span>
+                                      <div id="australia-sral-s3-countries"
+                                        class="country-list-container countries-align" style="color:#00338D;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="publication-timeliness-container" style="display:none">
+                <div class="container-fluid">
+                  <br><br><br>
+                  <h3 style="width:100%; text-align:center;margin-top:20px;">Publication timeliness during the
+                    last month</h3>
+                  <div class="row">
+                    <div class="timeliness-page-column-info-box">
+                      <div class=" row">
+                        <div class="col-md-3 col-sm-3 col-xs-3 timeliness-button-column">
+                          <div class=" timeliness-button timeliness-scihub ">Copernicus Open Access Hub
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 availability-button-column">
+                          <div id="timeliness-colhub" class="timeliness-button timeliness-colhub">
+                            Collaborative Hub</div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 availability-button-column">
+                          <div id="timeliness-inthub" class="timeliness-button timeliness-inthub ">
+                            International Hub</div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 availability-button-column">
+                          <div id="timeliness-cophub" class="timeliness-button timeliness-cophub ">
+                            Copernicus Services Hub</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="rowFlex">
+                      <!-- **** SENTINEL-1 **** -->
+                      <div id="s1tm" class="col-md-4 SENTINEL-1-MAIN-CONTAINER colFlex">
+                        <div class="timelinessPanel">
+                          <div class="SENTINEL-1-NRT-CONTAINER">
+                            <!-- NRT -->
+                            <div class="row" style="text-align:center;">
+                              <span class="time-interval-label" data-toggle="tooltip" data-container="body"
+                                title="Products shall be available to the users within three hours after sensing">Near
+                                Real Time</span>
+                            </div>
+                            <div class="row">
+                              <div style="text-align:center;font-size:28px;" class="NRT-HOUR-SENTINEL-1"><span
+                                  class="hours" id="lbl_lbl_lbl_nrt_s1_hours_delay">-</span> from sensing</div>
+                            </div>
+                            <div class="row nrt" style="margin-bottom:20px;">
+                              <div class="timeliness-title s1-3 NRT-PIE-CHART-SENTINEL-1 pie-chart-container">
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- NTC -->
+                          <div class="SENTINEL-1-NTC-CONTAINER">
+                            <div class="row" style="text-align:center;">
+                              <span class="time-interval-label" data-toggle="tooltip" data-container="body"
+                                title="Products available to the users within 24 hours after sensing">Non
+                                Time Critical</span>
+                            </div>
+                            <div class="row">
+                              <div style="text-align:center;font-size:28px;" class="NTC-HOUR-SENTINEL-1"><span
+                                  class="hours" id="lbl_ntc_s1_hours_delay">-</span> from sensing</div>
+                            </div>
+                            <div class="row ntc" style="margin-bottom:20px;">
+                              <div class="timeliness-title s1-24 NTC-PIE-CHART-SENTINEL-1 pie-chart-container">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- **** SENTINEL-2 **** -->
+                      <div id="s2tm" class="col-md-4 SENTINEL-2-MAIN-CONTAINER colFlex">
+                        <div class="timelinessPanel">
+                          <!-- NRT -->
+                          <div class="SENTINEL-2-NRT-CONTAINER">
+                            <div class="row" style="text-align:center;">
+                              <span class="time-interval-label">Near Real Time</span>
+                            </div>
+                            <div class="row">
+                              <div class="  NRT-HOUR-SENTINEL-2">
+                                <div style="text-align:center;font-size:28px" class="NRT-HOUR-SENTINEL-2"><span
+                                    class="hours" id="lbl_lbl_lbl_lbl_lbl_nrt_s2_hours_delay">-</span> from
+                                  sensing</div>
+                              </div>
+                            </div>
+                            <div class="row nrt" style="margin-bottom:20px;">
+                              <div class=" nrt-row NRT-PIE-CHART-SENTINEL-2">
+                                <div class="timeliness-title s2-3 NRT-PIE-CHART-SENTINEL-2 pie-chart-container">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- NTC -->
+                          <div class="SENTINEL-2-NTC-CONTAINER">
+                            <div class="row" style="text-align:center;">
+                              <span class="time-interval-label" data-toggle="tooltip" data-container="body"
+                                title="Products available to the users within 24 hours after sensing">Non
+                                Time Critical</span>
+                            </div>
+                            <div class="row">
+                              <div class=" NTC-HOUR-SENTINEL-2">
+                                <div style="text-align:center;font-size:28px"><span class="hours"
+                                    id="lbl_ntc_s2_hours_delay">-</span> from sensing</div>
+                              </div>
+                            </div>
+                            <div class="row ntc" style="margin-bottom:20px;position: relative;">
+                              <div class=" NTC-PIE-CHART-SENTINEL-2">
+                                <div class="timeliness-title s2-24 NTC-PIE-CHART-SENTINEL-2 pie-chart-container">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- **** SENTINEL-3 **** -->
+                      <div id="s3tm" class="col-md-4 SENTINEL-3-MAIN-CONTAINER colFlex">
+                        <div class="timelinessPanel">
+
+                          <!-- ========== NRT =========== -->
+                          <div class="SENTINEL-3-NRT-CONTAINER">
+
+                            <!-- LABELS -->
+                            <div class="row" style="text-align:center;">
+
+                              <!-- OLCI -->
+                              <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="time-interval-label opt nrt-label-olci-box" data-toggle="tooltip"
+                                  data-container="body"
+                                  title="Products shall be available to the users within three hours after sensing">Near
+                                  Real Time - OLCI</span>
+                              </div>
+
+                              <!-- SLSTR -->
+                              <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="time-interval-label nrt-label-slstr-box" data-toggle="tooltip"
+                                  data-container="body"
+                                  title="Products shall be available to the users within three hours after sensing">Near
+                                  Real Time - SLSTR</span>
+                              </div>
+
+                              <!-- SRAL -->
+                              <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="time-interval-label opt nrt-label-sral-box" data-toggle="tooltip"
+                                  data-container="body"
+                                  title="Products shall be available to the users within three hours after sensing">Near
+                                  Real Time - SRAL</span>
+                              </div>
+                            </div>
+
+                            <!-- FROM SENSING -->
+                            <div class="row">
+                              <!-- OLCI -->
+                              <div class=" col-md-3 col-sm-3 col-xs-3 NRT-HOUR-SENTINEL-3-OLCI">
+                                <div style="text-align:center;" class="NRT-HOUR-SENTINEL-3-OLCI sensing-small"><span
+                                    class="hours-small" id="lbl_nrt_s3_olci_hours_delay">-</span> from sensing</div>
+                              </div>
+
+                              <!-- SLSTR -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NRT-HOUR-SENTINEL-3-SLSTR">
+                                <div style="text-align:center;" class="NRT-HOUR-SENTINEL-3-SLSTR sensing-small"><span
+                                    class="hours-small" id="lbl_nrt_s3_slstr_hours_delay">-</span> from sensing
+                                </div>
+                              </div>
+
+                              <!-- SRAL -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NRT-HOUR-SENTINEL-3-SRAL">
+                                <div style="text-align:center;" class="NRT-HOUR-SENTINEL-3-SRAL sensing-small"><span
+                                    class="hours-small" id="lbl_nrt_s3_sral_hours_delay">-</span> from sensing</div>
+                              </div>
+                            </div>
+
+                            <!-- PIE-CHART -->
+                            <div class="row nrt" style="margin-bottom:20px;">
+                              <!-- OLCI -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NRT-PIE-CHART-SENTINEL-3-OLCI">
+                                <div
+                                  class="timeliness-title s3-3-olci NRT-PIE-CHART-SENTINEL-3-OLCI pie-chart-container pie-chart-container-s3">
+                                </div>
+                              </div>
+
+                              <!-- SLSTR -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NRT-PIE-CHART-SENTINEL-3-SLSTR">
+                                <div
+                                  class="timeliness-title s3-3-slstr NRT-PIE-CHART-SENTINEL-3-SLSTR pie-chart-container pie-chart-container-s3">
+                                </div>
+                              </div>
+
+                              <!-- SRAL -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NRT-PIE-CHART-SENTINEL-3-SRAL">
+                                <div
+                                  class="timeliness-title s3-3-sral NRT-PIE-CHART-SENTINEL-3-SRAL pie-chart-container pie-chart-container-s3">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- ========== STC =========== -->
+                          <div class="SENTINEL-3-STC-CONTAINER">
+
+                            <!-- LABELS -->
+                            <div class="row" style="text-align:center;">
+                              <!-- SRAL -->
+                              <!-- Right Formatter -->
+                              <div class=" col-md-3 col-sm-3 col-xs-3 timeliness-float STC-HOUR-SENTINEL-3-SRAL">
+                              </div>
+
+                              <div class="col-md-3 col-sm-3 col-xs-3 timeliness-float">
+                                <span class="time-interval-label stc-label-sral-box" data-toggle="tooltip"
+                                  data-container="body"
+                                  title="Products available to the users within 48 hours after sensing">Short
+                                  Time Critical - SRAL</span>
+                              </div>
+                            </div>
+
+                            <!-- FROM SENSING -->
+                            <div class="row">
+                              <!-- SRAL -->
+                              <!-- Right Formatter -->
+                              <div class=" col-md-3 col-sm-3 col-xs-3 timeliness-float STC-HOUR-SENTINEL-3-SRAL">
+                              </div>
+                              <div class=" col-md-3 col-sm-3 col-xs-3 timeliness-float STC-HOUR-SENTINEL-3-SRAL">
+                                <div style="text-align:center;" class="STC-HOUR-SENTINEL-3-SRAL sensing-small"><span
+                                    class="hours-small" id="lbl_stc_s3_sral_hours_delay">-</span> from sensing</div>
+                              </div>
+                            </div>
+
+                            <!-- PIE-CHART -->
+                            <div class="row stc" style="margin-bottom:20px;">
+                              <!-- SRAL -->
+                              <!-- Right Formatter -->
+                              <div class=" col-md-3 col-sm-3 col-xs-3 timeliness-float STC-HOUR-SENTINEL-3-SRAL">
+                              </div>
+                              <div class="col-md-3 col-sm-3 col-xs-3 timeliness-float STC-PIE-CHART-SENTINEL-3-SRAL">
+                                <div
+                                  class="timeliness-title s3-stc-sral STC-PIE-CHART-SENTINEL-3-SRAL pie-chart-container pie-chart-container-s3">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <!-- ========== NTC =========== -->
+                          <div class="SENTINEL-3-NTC-CONTAINER">
+
+                            <!-- LABELS -->
+                            <div class="row" style="text-align:center;">
+
+                              <!-- OLCI -->
+                              <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="time-interval-label ntc-label-olci-box" data-toggle="tooltip"
+                                  data-container="body"
+                                  title="Products available to the users within one month after sensing">Non
+                                  Time Critical - OLCI</span>
+                              </div>
+
+                              <!-- SLSTR -->
+                              <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="time-interval-label ntc-label-slstr-box" data-toggle="tooltip"
+                                  data-container="body"
+                                  title="Products available to the users within one month after sensing">Non
+                                  Time Critical - SLSTR</span>
+                              </div>
+
+                              <!-- SRAL -->
+                              <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="time-interval-label ntc-label-sral-box" data-toggle="tooltip"
+                                  data-container="body"
+                                  title="Products available to the users within one month after sensing">Non
+                                  Time Critical - SRAL</span>
+                              </div>
+
+                              <!-- SYNERGY -->
+                              <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="time-interval-label NTC-HOUR-SENTINEL-3-SYNERGY" data-toggle="tooltip"
+                                  data-container="body"
+                                  title="Products available to the users within one month after sensing">Non
+                                  Time Critical - SYNERGY</span>
+                              </div>
+                            </div>
+
+                            <!-- FROM SENSING -->
+                            <div class="row">
+                              <!-- OLCI -->
+                              <div class="ctimeliness-colhub-sm-3 col-xs-3 NTC-HOUR-SENTINEL-3-OLCI sensing-small">
+                                <div style="text-align:center; "><span class="hours-small NTC-HOUR-SENTINEL-3-OLCI "
+                                    id="lbl_ntc_s3_olci_hours_delay">-</span> from sensing</div>
+                              </div>
+
+                              <!-- SLSTR -->
+                              <div class="ctimeliness-colhub-sm-3 col-xs-3 NTC-HOUR-SENTINEL-3-SLSTR sensing-small">
+                                <div style="text-align:center;"><span class="hours-small NTC-HOUR-SENTINEL-3-SLSTR"
+                                    id="lbl_ntc_s3_slstr_hours_delay">-</span> from sensing
+                                </div>
+                              </div>
+
+                              <!-- SRAL -->
+                              <div class="ctimeliness-colhub-sm-3 col-xs-3 NTC-HOUR-SENTINEL-3-SRAL sensing-small">
+                                <div style="text-align:center; "><span class="hours-small NTC-HOUR-SENTINEL-3-SRAL"
+                                    id="lbl_ntc_s3_sral_hours_delay">-</span> from sensing</div>
+                              </div>
+
+                              <!-- SYNERGY -->
+                              <div class="ctimeliness-colhub-sm-3 col-xs-3 NTC-HOUR-SENTINEL-3-SYNERGY sensing-small">
+                                <div style="text-align:center; "><span class="hours-small NTC-HOUR-SENTINEL-3-SYNERGY"
+                                    id="lbl_ntc_s3_synergy_hours_delay">-</span> from sensing
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- PIE-CHART -->
+                            <div class="row ntc" style="margin-bottom:20px;">
+                              <!-- OLCI -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NTC-PIE-CHART-SENTINEL-3-OLCI">
+                                <div
+                                  class="timeliness-title s3-24-olci NTC-PIE-CHART-SENTINEL-3-OLCI pie-chart-container pie-chart-container-s3">
+                                </div>
+                              </div>
+
+                              <!-- SLSTR -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NTC-PIE-CHART-SENTINEL-3-SLSTR">
+                                <div
+                                  class="timeliness-title s3-24-slstr NTC-PIE-CHART-SENTINEL-3-SLSTR pie-chart-container pie-chart-container-s3">
+                                </div>
+                              </div>
+
+                              <!-- SRAL -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NTC-PIE-CHART-SENTINEL-3-SRAL">
+                                <div
+                                  class="timeliness-title s3-24-sral NTC-PIE-CHART-SENTINEL-3-SRAL pie-chart-container pie-chart-container-s3">
+                                </div>
+                              </div>
+
+                              <!-- SYNERGY -->
+                              <div class="col-md-3 col-sm-3 col-xs-3 NTC-HOUR-SENTINEL-3-SYNERGY">
+                                <div
+                                  class="timeliness-title s3-synergy NTC-HOUR-SENTINEL-3-SYNERGY pie-chart-container pie-chart-container-s3">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- **** SENTINEL-5P **** -->
+                      <div id="s5tm" class="col-md-4 SENTINEL-5-MAIN-CONTAINER colFlex">
+                        <div class="timelinessPanel">
+
+                          <!-- NTC -->
+                          <div class="SENTINEL-1-NTC-CONTAINER">
+                            <div class="row" style="text-align:center;">
+                              <span class="time-interval-label" data-toggle="tooltip" data-container="body"
+                                title="Products shall be available to the users within three hours from the sensing">NRT-Level2</span>
+                            </div>
+                            <div class="row">
+                              <div style="text-align:center;font-size:28px;" class="NTC-HOUR-SENTINEL-1"><span
+                                  class="hours" id="lbl_nrt_s5_hours_delay">-</span> from sensing</div>
+                            </div>
+                            <div class="row ntc" style="margin-bottom:20px;">
+                              <div class="timeliness-title s5-nrt-l2_ NTC-PIE-CHART-SENTINEL-1 pie-chart-container">
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- <div style="height:200px; width:100%; background-color: red"> -->
+                          <div style="display: inline-block; height:200px; width:40%;">
+                            <span class="SENTINELtimeliness-colhub-1-NTC-CONTAINER">
+                              <div class="row">
+                                <span class="time-interval-label" data-toggle="tooltip" data-container="body"
+                                  title="Products shall be available to the users within 12 hours from the sensing">NTC-Level1B</span>
+                              </div>
+                              <div class="row">
+                                <div style="text-align:center;font-size:28px;" class="NTC-HOUR-SENTINEL-1"><span
+                                    class="hours" id="lbl_ntc_s5_hours_delay">-</span> from sensing</div>
+                              </div>
+                              <div class="row ntc" style="margin-bottom:20px;">
+                                <div class="timeliness-title s5-ntc-l1b NTC-PIE-CHART-SENTINEL-1 pie-chart-container"
+                                  style="padding: 0% 25%"></div>
+                              </div>
+                            </span>
+                          </div>
+
+                          <div style="display: inline-block; height:200px; width:40%">
+                            <span class="SENTINEL-1-NTC-CONTAINER">
+                              <div class="row">
+                                <span class="time-interval-label" data-toggle="tooltip" data-container="body"
+                                  title="Products shall be available to the users within 5 hours from the sensing">NTC-Level2</span>
+                              </div>
+                              <div class="row">
+                                <div style="text-align:center;font-size:28px;" class="NTC-HOUR-SENTINEL-1"><span
+                                    class="hours" id="lbl_ntc_s5_l2_hours_delay">-</span> from sensing</div>
+                              </div>
+                              <div class="row ntc" style="margin-bottom:20px;">
+                                <div class="timeliness-title s5-ntc-l2_ NTC-PIE-CHART-SENTINEL-1 pie-chart-container"
+                                  style="padding: 0% 25%"></div>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="mymodal-title text-center">
+          <div>{{eventTitle}}</div>
+        </div>
+        <br>
+        <div class="col-md-2 col-sm-4 col-xs-4">
+          <img src="../../assets/images/placeholder.png" alt="" class="img-circle details-icon">
+        </div>
+        <div class="col-md-10 col-sm-8 col-xs-8">
+          <div class="row">
+            <div class="col-md-3 details-label">
+              <span><b>Event Start Date</b></span>
+            </div>
+            <div class="col-md-3">
+              <span>{{newStarDate}}</span>
+            </div>
+
+            <div class="col-md-3 details-label">
+              <span><b>Event Stop Date</b></span>
+            </div>
+            <div class="col-md-3">
+              <span>{{newEndDate}}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 details-label">
+              <b>Category</b>
+            </div>
+            <div class="col-md-3">
+              <span>{{category}}</span>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div [innerHTML]="eventDescription"></div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            More Info at: <a target="_blank" href={{externalurl}}>{{externalurl}}</a>
+          </div>
+        </div>
+
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Modal Bottom -->
+  <hr>
+  <div class="mymodal-bottom">
+    <div style="text-align: right">
+      <button (click)="closeModal('custom-modal-1');" type="button" class="btn btn-secondary"
+        data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</app-modal>

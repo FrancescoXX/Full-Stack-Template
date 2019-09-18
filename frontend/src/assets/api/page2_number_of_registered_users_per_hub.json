@@ -1,0 +1,17 @@
+[
+  {
+    "scihub_number_of_registered_users": 178280,
+    "inthub_number_of_registered_users": 4,
+    "cophub_number_of_registered_users": 217,
+    "colhub_number_of_registered_users_collaborative": 18,
+    "colhub_number_of_registered_users_dhr": 7,
+    "scihub_number_of_download": 58515724,
+    "scihub_volume_of_download": 46515833545108293,
+    "inthub_number_of_download": 10016933,
+    "inthub_volume_of_download": 8706675406404138,
+    "cophub_number_of_download": 31902518,
+    "cophub_volume_of_download": 22812969948120223,
+    "colhub_number_of_download": 33887321,
+    "colhub_volume_of_download": 29674528636631566
+  }
+]

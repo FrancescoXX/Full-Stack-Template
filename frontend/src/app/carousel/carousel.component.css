@@ -1,0 +1,31 @@
+.carousel-container {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  z-index: 500;
+  background-color: transparent;
+}
+
+.carousel-button {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  color: gray;
+  font-size: 30px;
+  background-color: transparent;
+  outline: none !important;
+  border: none;
+  cursor: pointer;
+}
+
+.c-right {
+  float: right;
+  margin-right: 15px;
+}
+
+.c-left {
+  float: left;
+  margin-left: 15px;
+}
+
+.carousel-button:hover {
+  color: white;
+}

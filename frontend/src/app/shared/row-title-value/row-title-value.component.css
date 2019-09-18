@@ -1,0 +1,17 @@
+/*
+* CSS FOR SPECIFIC ROW ITEM COMPONENT
+*/
+
+.row-container {
+  /* background-color: lightcoral; */
+}
+
+.row-title {
+  font-size: 25px;
+  color: black;
+}
+
+.row-value {
+  font-size: 30px;
+  color: #337AB7;
+}

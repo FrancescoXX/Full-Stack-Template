@@ -1,0 +1,877 @@
+  .col-mission-facts-button {
+    text-align: center;
+  }
+
+  .mission-facts-button {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .migration-buttons-row {
+    top: calc( 50% - 100px);
+    position: absolute;
+    width: 100%;
+  }
+
+  .sentinels-image {
+    margin: auto;
+    display: block;
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    left: calc( 50% - 20px);
+  }
+
+  .mission-facts-label {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .migration-buttons-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+
+  /* Dialog dissemination */
+
+  .rowFlex {
+    display: flex;
+  }
+
+  .colFlex {
+    flex: 1;
+    padding: 1em;
+    border: 0px;
+  }
+
+  .timelinessPanel {
+    border: 0px solid black;
+    float: none;
+    text-align: center;
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .button-group {
+    padding-left: 30px;
+  }
+
+  .timeliness-page-column-container {
+    padding: 5px !important;
+  }
+
+  .timeliness-scihub {
+    border: solid;
+    border-color: #0099e6;
+    color: #0099e6;
+    margin-bottom: 10px;
+  }
+
+  .timeliness-inthub {
+    border: solid;
+    border-color: #339933;
+    color: #339933;
+    margin-bottom: 10px;
+  }
+
+  .timeliness-colhub {
+    border: solid;
+    border-color: #822433;
+    color: #822433;
+    margin-bottom: 10px;
+  }
+
+  .timeliness-cophub {
+    border: solid;
+    border-color: #ff9933;
+    color: #ff9933;
+    margin-bottom: 10px;
+  }
+
+  .timeliness-button {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    text-align: -webkit-center;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%
+  }
+
+  .timeliness-title {
+    text-align: center;
+  }
+
+  .timeliness-icon-label {
+    text-align: center;
+    color: #333;
+    width: 100%;
+  }
+
+  .timeliness-title {
+    text-align: center;
+    text-align: -webkit-center;
+  }
+
+  .timeliness-page-column-title {
+    padding: 25px;
+    color: #606469;
+  }
+
+  .timeliness-page-column-info-box {
+    border-radius: 30px;
+    font-size: 25px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 1px 15px;
+  }
+
+  .timeliness-page-column-container {
+    padding: 5px !important;
+  }
+
+  .timeliness-page-column {
+    padding: 0px;
+    margin-bottom: 5px;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+  }
+
+  .timeliness-button-column {
+    padding: 0px 3px;
+  }
+
+  .hours {
+    font-size: 34px;
+  }
+
+  .hours-small {
+    font-size: 30px;
+  }
+
+  .time-interval-label {
+    font-size: 16px;
+    background-color: rgba(128, 128, 128, 0.59);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 3px 5px 3px 5px;
+    border-radius: 4px;
+  }
+
+  .top-ten-countries-instrument-label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: rgba(128, 128, 128, 0.59);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 3px 5px 3px 5px;
+    border-radius: 4px;
+  }
+
+  .sensing-small {
+    font-size: 24px;
+  }
+
+  .switch-button-timeliness {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    right: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .mission-button-timeliness {
+      height: 60px;
+      margin: auto;
+    }
+    .timeliness-round {
+      width: 50%;
+    }
+    .full-col-pie-chart {
+      width: 100% !important;
+    }
+    .timeliness-label {
+      text-align: right;
+      color: #333;
+      font-size: 18px;
+    }
+    .timeliness-h3 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .timeliness-main-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 22px;
+    }
+  }
+
+  @media screen and (min-width: 993px) and (max-width: 1200px) {
+    .mission-button-timeliness {
+      height: 60px;
+      margin: auto;
+    }
+    .timeliness-round {
+      width: 80%;
+    }
+    .timeliness-label {
+      text-align: right;
+      color: #333;
+      font-size: 17px;
+    }
+    .timeliness-h3 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .timeliness-main-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 21px;
+    }
+    .time-interval-label {
+      font-size: 15px;
+    }
+    .hours-small {
+      font-size: 28px;
+    }
+    .pie-chart-container2 {
+      padding-left: 15% !important;
+      padding-right: 15% !important;
+    }
+    .switch-button-timeliness {
+      bottom: -10px;
+      font-size: 11px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    .mission-button-timeliness {
+      height: 60px;
+      margin: auto;
+    }
+    .timeliness-round {
+      width: 50%;
+    }
+    .timeliness-label {
+      text-align: right;
+      color: #333;
+      font-size: 14px;
+    }
+    .timeliness-h3 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .timeliness-main-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 18px;
+    }
+    .pie-chart-container {
+      padding-left: 11% !important;
+      padding-right: 11% !important;
+    }
+    .pie-chart-container2 {
+      padding-left: 30% !important;
+      padding-right: 30% !important;
+    }
+    .time-interval-label {
+      font-size: 15px;
+    }
+    .hours-small {
+      font-size: 24px;
+    }
+    .sensing-small {
+      font-size: 20px;
+    }
+    .switch-button-timeliness {
+      bottom: -10px;
+      font-size: 11px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .mission-button-timeliness {
+      height: 60px;
+      margin: auto;
+    }
+    .timeliness-round {
+      width: 100%;
+    }
+    .timeliness-label {
+      text-align: right;
+      color: #333;
+      font-size: 13px;
+    }
+    .timeliness-h3 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .timeliness-main-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+    .pie-chart-container {
+      padding-left: 11% !important;
+      padding-right: 11% !important;
+    }
+    .pie-chart-container2 {
+      padding-left: 20% !important;
+      padding-right: 20% !important;
+    }
+    .time-interval-label {
+      font-size: 15px;
+    }
+    .hours-small {
+      font-size: 22px;
+    }
+    .sensing-small {
+      font-size: 18px;
+    }
+    .switch-button-timeliness {
+      bottom: -20px;
+      font-size: 11px;
+    }
+  }
+
+  .timeliness-row {
+    margin-top: 10px !important;
+  }
+
+  .timeliness-switch-button {
+    width: 192px;
+    position: fixed;
+    top: 20px;
+    z-index: 10;
+  }
+
+  .timeliness-first-interval-button {
+    float: left;
+    display: inline-block;
+    border-width: 50%;
+    text-align: center;
+    background-color: #EBEBEB;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+  }
+
+  .timeliness-second-interval-button {
+    float: left;
+    display: inline-block;
+    background-color: #1C5D91;
+    color: #F6F6F6;
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* .nrt {
+} */
+
+  .column-visibility {
+    visibility: hidden !important;
+  }
+
+  .pie-chart-container {
+    padding-left: 40%;
+    padding-right: 40%;
+  }
+
+  .pie-chart-container-s3 {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .timeliness-container {
+    margin-bottom: 40px;
+  }
+
+  .column-timeliness {
+    background-color: rgba(200, 200, 200, 0.2);
+    border-radius: 10px;
+    padding: 5px !important;
+  }
+
+  .timeliness-float {
+    float: right;
+  }
+
+  .timeliness-mission {
+    font-size: 16px;
+    color: rgb(55, 55, 55);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px !important;
+    padding: 3px 5px 3px 5px;
+  }
+
+  #page3Panel1, #page3Panel2, #page3Panel3 {
+    border: 0px solid black;
+    float: none;
+    text-align: center;
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .disseminationstats_map {
+    height: 450px;
+  }
+
+  .mission-volume {
+    font-size: 150%;
+  }
+
+  [class*="data"] {
+    text-align: left;
+    font-size: 120%;
+    color: black;
+    padding: 10px;
+  }
+
+  .ct-label {
+    font-size: 18px;
+    fill: black;
+  }
+
+  hr.style13 {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .ct-series-a .ct-slice-donut {
+    stroke: #00338D;
+  }
+
+  .ct-series-b .ct-slice-donut {
+    stroke: #0098DB;
+  }
+
+  .ct-series-c .ct-slice-donut {
+    stroke: #008542;
+  }
+
+  .ct-series-d .ct-slice-donut {
+    stroke: #E37222;
+  }
+
+  .ct-series-e .ct-slice-donut {
+    stroke: #D0103A;
+  }
+
+  .ct-series-f .ct-slice-donut {
+    stroke: #FDC82F;
+  }
+
+  .flipswitch {
+    position: fixed !important;
+    width: 95px;
+    bottom: 60px;
+    z-index: 10;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .flipswitch input[type=checkbox] {
+    display: none;
+  }
+
+  .flipswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    display: none;
+  }
+
+  .flipswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -ms-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+    display: none;
+  }
+
+  .flipswitch-inner:before, .flipswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 24px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 14px;
+    color: white;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .flipswitch-inner:before {
+    content: "Number";
+    padding-left: 12px;
+    background-color: #256799;
+    color: #FFFFFF;
+  }
+
+  .flipswitch-inner:after {
+    content: "Volume";
+    padding-right: 12px;
+    background-color: #256799;
+    color: #FFFFFF;
+    text-align: right;
+  }
+
+  .flipswitch-switch {
+    width: 36px;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    position: absolute;
+    top: -5px;
+    bottom: 0;
+    right: 69px;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -moz-transition: all 0.3s ease-in 0s;
+    -ms-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+    display: none;
+  }
+
+  .flipswitch-cb:checked+.flipswitch-label .flipswitch-inner {
+    margin-left: 0;
+  }
+
+  .flipswitch-cb:checked+.flipswitch-label .flipswitch-switch {
+    right: 0;
+  }
+
+  .image-volume {
+    height: 60px;
+    margin: auto;
+  }
+
+  .volume-first-interval-button {
+    float: left;
+    display: inline-block;
+    border-width: 50%;
+    text-align: center;
+    background-color: #EBEBEB;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+  }
+
+  .volume-second-interval-button {
+    float: left;
+    display: inline-block;
+    background-color: #1C5D91;
+    color: #F6F6F6;
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+
+  .pie-product-type {
+    width: 76%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal-dialog {
+    width: 80% !important;
+  }
+
+  .modal-backdrop {
+    z-index: -1 !important;
+  }
+
+  .modal-open .modal {
+    overflow-y: hidden !important;
+  }
+
+  .modal-dialog {
+    overflow-y: initial !important;
+    overflow-x: none !important;
+  }
+
+  .modal-body {
+    overflow-y: auto;
+    overflow-x: none !important;
+    padding-left: 15px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+
+  #disseminationstats-dialog .modal-header {
+    border-bottom: none;
+  }
+
+  .disseminationstats-dialog-close {
+    padding: 5px;
+    top: 10px;
+    position: absolute;
+    right: 15px;
+  }
+
+  .volume-number-switch-mission-facts {
+    width: 132px;
+    position: fixed !important;
+    top: 80px;
+    z-index: 10;
+    float: right;
+    position: absolute;
+  }
+
+  .volume-number-switch:hover {
+    cursor: pointer;
+  }
+
+  .volume-switch-button {
+    float: left;
+    display: inline-block;
+    border-width: 50%;
+    text-align: center;
+    background-color: #F6F6F6;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    right: 0px;
+  }
+
+  .switch-button-mission-facts {
+    width: 192px;
+    position: fixed !important;
+    top: 80px;
+    z-index: 10;
+    position: absolute;
+  }
+
+  .number-switch-button {
+    float: left;
+    display: inline-block;
+    background-color: #1C5D91;
+    color: #F6F6F6;
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    right: 0px;
+  }
+
+  .modal-header {
+    padding-bottom: 0px;
+  }
+
+  .pie-chart-container-mission-facts {
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+  }
+
+  @media screen and (min-width: 1200px) {}
+
+  @media screen and (min-width: 993px) and (max-width: 1200px) {}
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    .volume-number-switch-mission-facts {
+      top: 5px;
+    }
+    .switch-button-mission-facts {
+      top: 5px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .volume-number-switch-mission-facts {
+      top: 5px;
+    }
+    .switch-button-mission-facts {
+      top: 5px;
+    }
+  }
+
+  .top_countries_label {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  #disseminationstats-container .nav-tabs {
+    display: inline-flex;
+  }
+
+  #disseminationstats-container .nav-tabs li {
+    margin-right: 10px;
+    list-style-type: none;
+  }
+
+  .menuTitleClass {
+    text-align: center;
+    font-size: 200%;
+    color: #0098DB;
+    margin: 0px;
+  }
+
+  .missionMenuItem {
+    width: 205px;
+  }
+
+  .imgMap {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rowMap {
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .switch-button:hover {
+    cursor: pointer;
+  }
+
+  .active-users-first-interval-button {
+    float: left;
+    display: inline-block;
+    border-width: 50%;
+    text-align: center;
+    background-color: #EBEBEB;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+  }
+
+  .active-users-second-interval-button {
+    float: left;
+    display: inline-block;
+    background-color: #1C5D91;
+    color: #F6F6F6;
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+
+  .switch-button2 {
+    width: 192px;
+    position: fixed;
+    top: 50px !important;
+    z-index: 10;
+  }
+
+  .row-xy {
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .top-ten-list {
+    padding-top: 10px;
+  }
+
+  .country-list-container {
+    margin-top: 10px;
+  }
+
+  .s1-s2-top-ten-list {
+    display: none;
+  }
+
+  .s3-top-ten-list {
+    display: none;
+  }
+
+  .s1-s2-top-ten-list {
+    margin-top: 10px;
+  }
+
+  .pie-chart-container-mission-facts-s3 svg {
+    width: 100% !important;
+  }
+
+  /* More CSS */
+
+  .s3-md-published-title {
+    font-size: 20px;
+    color: #337ab7;
+  }
+
+  .increase-decrease {
+    stroke: none;
+    color: #337ab7;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .big-pie-chart {
+    padding: 0% 5% 5% 5%;
+  }
+
+  .countries-align {
+    padding-left: 10%;
+    text-align: left;
+  }
+
+  .europe-color {
+    color: #0098DB;
+  }
+
+  .continent-container {
+    display: flex;
+    align-items: center;
+  }

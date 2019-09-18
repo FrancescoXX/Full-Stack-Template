@@ -1,0 +1,136 @@
+<div [appResizer] id="avail-calendar-container ">
+	<h3 style="width:100%; text-align:center;">Service Availability</h3>
+	<div id="avail-calendar-header">
+		<div class="text-center">
+			<div class="avail-hub-title ">{{selected_hub_title}}&#160;</div>
+			<div class="avail-calendar-title ">{{currentCalendarTitle}}</div>
+		</div>
+	</div>
+	<div class="container-fluid bg">
+		<div class="row">
+			<div class="avail-calendar-date-detail ">
+			</div>
+			<div class="col-md-12 col-lg-12 col-md-12 text-center">
+				<div class=" row">
+					<div (click)="OnSelectHub(1)" class="col-md-3 col-sm-3 col-xs-3 availability-button-column">
+						<div class=" availability-button scihub ">Copernicus Open Access Hub</div>
+					</div>
+					<div (click)="OnSelectHub(2)" class="col-md-3 col-sm-3 col-xs-3 availability-button-column">
+						<div class=" availability-button colhub">Collaborative Hub</div>
+					</div>
+					<div (click)="OnSelectHub(3)" class="col-md-3 col-sm-3 col-xs-3 availability-button-column">
+						<div class=" availability-button inthub ">International Hub</div>
+					</div>
+					<div (click)="OnSelectHub(4)" class="col-md-3 col-sm-3 col-xs-3 availability-button-column">
+						<div class=" availability-button cophub ">Copernicus Services Hub</div>
+					</div>
+				</div>
+				<div class=" row draw-legend">
+
+					<div class="col-md-4 col-sm-4 col-xs-4 ">
+						<div class="over-95 col-md-4 col-sm-1 col-xs-1"></div>
+						<div class=" avail-legend-label col-md-8 col-sm-11 col-xs-11">availability &gt; 95%</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-4 ">
+						<div class="until-90 col-md-4 col-sm-1 col-xs-1"></div>
+						<div class="avail-legend-label col-md-8 col-sm-11 col-xs-11">90% &le; availability &le; 95%
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-4 ">
+						<div class="under-90 col-md-4 col-sm-1 col-xs-1"></div>
+						<div class="avail-legend-label col-md-8 col-sm-11 col-xs-11">availability &lt; 90%</div>
+					</div>
+				</div>
+				<div class=" row avail-calendar-content-horizontal avail-calcontent ">
+					<div class="avail-calendar-container-horizontal">
+						<div id="avail-calendar-content-horizontal"></div>
+						<div id="avail-calendar-content-horizontal-curryear"></div>
+					</div>
+				</div>
+				<div class=" row avail-calendar-content avail-calcontent " id="avail-calendar-content"></div>
+				<div class=" row avail-calendar-content avail-calcontent " id="avail-calendar-content-curryear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<app-modal id="custom-modal-1">
+
+	<!-- Modal Top -->
+	<div class="mymodal-top">
+		<button (click)="closeModal('custom-modal-1');" type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<h4 class="modal-title" id="myModalLabel">Events Details</h4>
+		<div class="calendar-date-detail calendar-date-detail-events">
+		</div>
+	</div>
+
+	<!-- Modal Mid -->
+	<div class="mymodal-mid">
+		<div class="panel-body">
+			<div class="row">
+				<div class="mymodal-title text-center">
+					<div>{{eventTitle}}</div>
+				</div>
+				<br>
+				<div class="col-md-2 col-sm-4 col-xs-4">
+					<img src="../../assets/images/placeholder.png" alt="" class="img-circle details-icon">
+				</div>
+				<div class="col-md-10 col-sm-8 col-xs-8">
+					<div class="row">
+						<div class="col-md-3 details-label">
+							<span><b>Event Start Date</b></span>
+						</div>
+						<div class="col-md-3">
+							<span>{{newStarDate}}</span>
+						</div>
+
+						<div class="col-md-3 details-label">
+							<span><b>Event Stop Date</b></span>
+						</div>
+						<div class="col-md-3">
+							<span>{{newEndDate}}</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 details-label">
+							<b>Category</b>
+						</div>
+						<div class="col-md-3">
+							<span>{{category}}</span>
+						</div>
+					</div>
+					<br>
+					<br>
+					<br>
+				</div>
+				<div class="row">
+
+					<!-- <div class="col-md-12" ng-bind-html="eventDescription"></div>
+					<ng-bind-html ng-bind-html="eventDescription">
+					</ng-bind-html> -->
+					<div class="col-md-12">
+						<div [innerHTML]="eventDescription"></div>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						More Info at: <a target="_blank" href={{externalurl}}>{{externalurl}}</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Bottom -->
+	<hr>
+	<div class="mymodal-bottom">
+		<div style="text-align: right">
+			<button (click)="closeModal('custom-modal-1');" type="button" class="btn btn-secondary"
+				data-dismiss="modal">Close</button>
+		</div>
+	</div>
+</app-modal>

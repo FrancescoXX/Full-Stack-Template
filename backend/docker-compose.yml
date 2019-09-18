@@ -1,0 +1,30 @@
+version: '3'
+   
+services:
+
+  # POSTGRES
+  database:
+    image: postgres
+    ports:
+      - "5431:5431"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # NODE BACKEND
+  app:
+    build: .
+    ports:
+      - "2000:1000" #external port:internal port
+    environment:
+      - HOST=0.0.0.0
+      - INTERNAL_PORT=1000 # internal port
+      - PGPASSWORD=anewpassword
+      - PGUSER=postgres
+      - PGDATABASE=postgres #DATABASE USED. using the default one
+      - PGHOST=database
+      - PGPORT=5431
+    depends_on:
+      - database
+
+volumes:
+  pgdata: {}

@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <h1>COLLGS LIST</h1>
+  <div *ngFor="let collgs of  collGSStoreService.todos$ | async">
+    <app-coll-gs-card [collgs]="collgs"></app-coll-gs-card>
+    <br>
+  </div>
+</div>

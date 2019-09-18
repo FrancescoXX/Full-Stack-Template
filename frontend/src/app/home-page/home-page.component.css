@@ -1,0 +1,137 @@
+.imgMap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@font-face {
+  font-family: NotesEsaReg;
+  src: url('../../assets/fonts/NotesEsaReg.otf');
+}
+
+div {
+  font-family: NotesEsaReg;
+}
+
+body {
+  /*background: url('images/world.png') no-repeat;*/
+  /* background-size: 100% 100%; */
+}
+
+h4 {
+  margin-top: 25px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.rowMap {
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* DAD2 STYLES */
+
+.dad2-carousel1-container-1 {
+  /* background-color: lightblue; */
+}
+
+.dad2-carousel1-container-2 {
+  /* background-color: lightcoral; */
+}
+
+.dad2-volume-of-user-download {
+  opacity: 1;
+  fill: #ffffff;
+  fill-opacity: 1;
+  stroke: dodgerblue;
+  stroke-width: 1.90147567;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+}
+
+.dad2-volume-icon {
+  fill: dodgerblue;
+  fill-opacity: 1
+}
+
+.dad2-registered-users {
+  opacity: 1;
+  fill: #ffffff;
+  fill-opacity: 1;
+  stroke: darkgreen;
+  stroke-width: 8;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-opacity: 1
+}
+
+.dad2-bottom-left-1 {
+  font-variant: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-size: 2.96700549px;
+  font-family: 'Roboto Black';
+  writing-mode: lr-tb;
+  fill: #8562a3;
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke: none
+}
+
+.dad2-bottom-left-2 {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 3.85513115px;
+  font-family: NotesEsaReg;
+  text-align: center;
+  text-anchor: middle;
+}
+
+.dad2-bottom-left-3 {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 3.85513115px;
+  font-family: NotesEsaReg;
+  -inkscape-font-specification: NotesEsaReg;
+  text-align: center;
+  text-anchor: middle;
+}
+
+.dad2-bottom-left-4 {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 5.7826972px;
+  font-family: NotesEsaReg;
+  -inkscape-font-specification: NotesEsaReg;
+  text-align: center;
+  text-anchor: middle;
+  fill: #000000;
+}
+
+.bubble{
+	cursor: pointer;
+}
+
+.big{
+  height: 820px;
+}

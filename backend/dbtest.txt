@@ -1,0 +1,22 @@
+  
+docker exec -it backend_database_1 psql -U postgres
+CREATE TABLE role(role_id serial PRIMARY KEY, role_name VARCHAR (255) UNIQUE NOT NULL);
+INSERT INTO role VALUES (123, 'Bananas');
+SELECT * FROM role;
+
+
+Books example
+CREATE TABLE Books(BookId int, BookName text, BookCost int);
+INSERT INTO Books VALUES(1001, 'Who will cry when you die', 299);
+INSERT INTO Books VALUES(1002, 'Practical PostgreSQL', 1722);
+INSERT INTO Books VALUES(1003, 'Beginning Databases with PostgreSQL', 1080);
+
+SELECT * FROM Books;
+UPDATE Books SET BookCost=1100 WHERE BookId=1003;
+SELECT * FROM Books WHERE BookId=1003;
+
+DELETE FROM Books WHERE BookId=1001;
+SELECT * FROM Books;
+
+
+DROP SCHEMA public CASCADE;CREATE SCHEMA public;

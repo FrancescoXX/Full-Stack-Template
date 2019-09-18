@@ -1,0 +1,14 @@
+/* Default Leaflet Map background */
+
+.leaflet-container {
+    background: white;
+}
+
+.leaflet-popup {
+    width: 300px;
+}
+
+#map {
+    height: 650px;
+    width: 100%;
+}

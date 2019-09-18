@@ -1,0 +1,27 @@
+{
+  "name": "dad2-backend",
+  "repository": "repo",
+  "license": "MIT",
+  "version": "0.0.1",
+  "description": "Dad 2 backend",
+  "author": "The Dad 2 Team ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dockerbuild": "docker build -t serco/dad2-backend:0.0.1 . ; docker rm -f dad2-backend ;  docker run --name dad2-backend -p 2000:1000 -d -it serco/dad2-backend:0.0.1 ; docker rmi $(docker images -f 'dangling=true' -q) --force; docker logs --follow dad2-backend",
+    "server-docker": "docker-compose down && docker-compose build && docker-compose up",
+    "server-docker-detached": "docker-compose down && docker-compose build && docker-compose up &",
+    "enter-postgres": "docker exec -it backend_database_1 psql -U postgres",
+    "clearimages": "docker rmi $(docker images -f 'dangling=true' -q) --force"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.10.0",
+    "sequelize": "^5.8.5",
+    "winston": "^3.2.1"
+  }
+}

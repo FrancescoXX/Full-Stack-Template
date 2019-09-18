@@ -1,0 +1,104 @@
+#scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.button-group {
+    padding-left: 30px;
+}
+
+.page-column-container {
+    padding: 5px !important;
+}
+
+.shadow {
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.switch-button2 {
+    width: 192px;
+    position: fixed;
+    top: 20px;
+    z-index: 10;
+}
+
+.switch-button2:hover {
+    cursor: pointer;
+}
+
+.first-interval-button {
+    float: left;
+    display: inline-block;
+    border-width: 50%;
+    text-align: center;
+    background-color: #EBEBEB;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+
+.second-interval-button {
+    float: left;
+    display: inline-block;
+    background-color: #1C5D91;
+    color: #F6F6F6;
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+#sciHub {
+    padding-left: 20px;
+    margin: 0px!important;
+}
+
+.graph-title {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.trends-mission-buttons {
+    width: 66px;
+}
+/*.trends-mission-buttons {
+    min-width: 88px;
+}
+
+@media screen and (min-width: 1200px) {
+    .trends-mission-buttons {
+        min-width: 88px;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .trends-mission-buttons {
+        min-width: 88px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .trends-mission-buttons {
+        min-width: 60px;
+        max-width: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .trends-mission-buttons {
+        min-width: 60px;
+        max-width: 60px;
+    }
+}*/
+@media screen and (max-width: 768px) {
+    .trends-mission-buttons {
+        /*max-width: 80px;
+        min-width: 40px;*/
+        padding: 10px 1px !important;
+    }
+}

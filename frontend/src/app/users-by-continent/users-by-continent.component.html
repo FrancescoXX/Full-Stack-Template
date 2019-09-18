@@ -1,0 +1,189 @@
+<div class="container">
+
+  <h3 style="width:100%; text-align:center;">Active Users on Copernicus Open Access Hub: Distribution by continent</h3>
+
+  <div class="switch-button2">
+    <div class="active-users-first-interval-button" onclick="activeUsersFirstInterval()">Last month</div>
+    <div class="active-users-second-interval-button" onclick="activeUsersSecondInterval()">Last 3 months</div>
+  </div>
+
+  <div class="row rowMap">
+    <div class="col-md-3">
+
+      <br>
+
+      <br>
+
+      <div style="text-align:center;font-size: 42px;color:#0098DB">Europe</div>
+
+    </div>
+    <div class="col-md-3">
+      <br>
+      <div style="text-align:center;"><img class="imgMap" src="../../assets/images/europe.png">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px;">
+        <br>
+        <div><img class="imgMap" src="../../assets/images/omini.png">
+          <span style="color:#9a9b9c">Active Users</span>
+          <br>
+          <span id="txtActiveUsersEurope" style="font-size: 28px;color:#0098DB">234908</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px; color:#9a9b9c"><span id="txtIncreaseEurope">Increase/decrease (last
+          3 months)</span>
+        <div id="donutEurope"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row rowMap">
+    <div class="col-md-3">
+      <br>
+      <br>
+      <div style="text-align:center;font-size: 42px;color:#e37222">Asia</div>
+    </div>
+    <div class="col-md-3">
+      <br>
+      <div style="text-align:center;"><img class="imgMap" src="../../assets/images/asia.png">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px;">
+        <br>
+        <div><img class="imgMap" src="../../assets/images/omini.png">
+          <span style="color:#9a9b9c">Active Users</span>
+          <br>
+          <span id="txtActiveUsersAsia" style="font-size: 28px;color:#e37222">13954</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px; color:#9a9b9c"><span id="txtIncreaseAsia">Increase/decrease (last 3
+          months)</span>
+        <div id="donutAsia"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row rowMap">
+    <div class="col-md-3">
+      <br>
+      <br>
+      <div style="text-align:center;font-size: 42px;color:#008542">North America</div>
+    </div>
+    <div class="col-md-3">
+      <br>
+      <div style="text-align:center;"><img class="imgMap" src="../../assets/images/northamerica.png">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px;">
+        <br>
+        <div><img class="imgMap" src="../../assets/images/omini.png">
+          <span style="color:#9a9b9c">Active Users</span>
+          <br>
+          <span id="txtActiveUsersNorthAmerica" style="font-size: 28px;color:#008542">56473</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px; color:#9a9b9c"><span id="txtIncreaseNorthAmerica">Increase/decrease
+          (last 3 months)</span>
+        <div id="donutNorthAmerica"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row rowMap">
+    <div class="col-md-3">
+      <br>
+      <br>
+      <div style="text-align:center;font-size: 42px;color:#D0103A">South America and Antarctica</div>
+    </div>
+    <div class="col-md-3">
+      <br>
+      <div style="text-align:center;"><img class="imgMap" src="../../assets/images/southamerica.png">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px;">
+        <br>
+        <div><img class="imgMap" src="../../assets/images/omini.png">
+          <span style="color:#9a9b9c">Active Users</span>
+          <br>
+          <span id="txtActiveUsersSouthAmerica" style="font-size: 28px;color:#D0103A">87654</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px; color:#9a9b9c"><span id="txtIncreaseSouthAmerica">Increase/decrease
+          (last 3 months)</span>
+        <div id="donutSouthAmerica"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row rowMap">
+    <div class="col-md-3">
+      <br>
+      <br>
+      <div style="text-align:center;font-size: 42px;color:#FDC82F">Africa</div>
+    </div>
+    <div class="col-md-3">
+      <br>
+      <div style="text-align:center;"><img class="imgMap" src="../../assets/images/africa.png">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px;">
+        <br>
+        <div><img class="imgMap" src="../../assets/images/omini.png">
+          <span style="color:#9a9b9c">Active Users</span>
+          <br>
+          <span id="txtActiveUsersAfrica" style="font-size: 28px;color:#B88B00">12654</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px; color:#9a9b9c"><span id="txtIncreaseAfrica">Increase/decrease (last
+          3 months)</span>
+        <div id="donutAfrica"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row rowMap">
+    <div class="col-md-3">
+      <br>
+      <br>
+      <div style="text-align:center;font-size: 42px;color:#00338D">Oceania</div>
+    </div>
+    <div class="col-md-3">
+      <br>
+      <div style="text-align:center;"><img class="imgMap" src="../../assets/images/australia.png">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px;">
+        <br>
+        <div><img class="imgMap" src="../../assets/images/omini.png">
+          <span style="color:#9a9b9c">Active Users</span>
+          <br>
+          <span id="txtActiveUsersAustralia" style="font-size: 28px;color:#00338D">4590</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="text-align:center;font-size: 18px; color:#9a9b9c"><span id="txtIncreaseAustralia">Increase/decrease
+          (last 3 months)</span>
+        <div id="donutAustralia"></div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>

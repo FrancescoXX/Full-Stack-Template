@@ -1,0 +1,46 @@
+<!-- Version -->
+<h3>Check Version...</h3>
+<div>Version: {{version}}</div>
+<div>
+  <button (click)="getVersion()" class="btn btn-primary">get Version</button>
+</div>
+<hr>
+
+<!-- Token -->
+<h3>GET Token...</h3>
+<input [ngModel]="name" (ngModelChange)="name = $event">
+<div>
+  <button (click)="getToken ()" class="btn btn-primary">get TOKEN</button>
+</div>
+<div>TOKEN IS: {{token}}</div>
+<hr>
+
+<!-- Users -->
+<h3>Check users in database...</h3>
+<button (click)="getAllUsers()" class="btn btn-primary">GET ALL USERS</button>
+<p>Users:</p>
+<div *ngIf="users"></div>
+<ul>
+  <li *ngFor="let user of users">
+    <div>{{ user.age }}</div>
+    <div>{{ user.createdAt }}</div>
+    <div>{{ user.id }}</div>
+    <div>{{ user.name }}</div>
+    <div>{{ user.updatedAt }}</div>
+    <hr>
+  </li>
+</ul>
+<div *ngIf="!users">no users</div>
+<hr>
+
+<!-- Version -->
+<h3>Get One User...</h3>
+<button (click)="getOneUser()" class="btn btn-primary">GET ONE USER</button>
+<div *ngIf="singleUser"></div>
+<div>{{ singleUser.age }}</div>
+<div>{{ singleUser.createdAt }}</div>
+<div>{{ singleUser.id }}</div>
+<div>{{ singleUser.name }}</div>
+<div>{{ singleUser.updatedAt }}</div>
+<hr>
+<div class="alert-danger" *ngIf="!singleUser">no users</div>

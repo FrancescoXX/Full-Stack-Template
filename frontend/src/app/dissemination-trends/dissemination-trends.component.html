@@ -1,0 +1,124 @@
+<div id="ginetto">
+  <div class="container-fluid trends-page-container">
+      <h3 style="width:100%; text-align:center;">Publication and dissemination: Trends</h3>
+      <div class="switch-button">
+          <div class="first-interval-button" onclick="trendsFirstInterval()">Last month</div>
+          <div class="second-interval-button" onclick="trendsSecondInterval()">Last 3 months</div>
+      </div>
+      <div class="row">
+          <div class="col-md-4 trends-page-column-container">
+              <div class="trends-page-column">
+                  <div class="row">
+                      <div class="trends-page-column-info-box">
+                          <div id="trends-download-total-label" class="trends-page-total-downloads-label">Total number of downloads</div>
+                          <span id="trends-download-total" class="trends-page-total-downloads">0</span>
+                          <br/>
+                      </div>
+                  </div>
+                  <div class="row trends-page-column-title">
+                      <div class="graph-title">Number of products downloaded per Sentinel</div>
+                  </div>
+                  <div class="row trends-page-chart">
+                      <canvas id="myChart1" width="200" height="200"></canvas>
+                  </div>
+                  <span>
+                  <span class="sentinels-div" style=" background-color: #FDC82F;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S1</span>
+                  <span class="sentinels-div" style=" background-color: #008542;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S2</span>
+                  <span class="sentinels-div" style=" background-color: #0098D8;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S3</span>
+                  <span class="sentinels-div" style="background-color: #330066;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S5P</span>
+                  </span>
+              </div>
+          </div>
+          <div class="col-md-4 trends-page-column-container">
+              <div class="trends-page-column">
+                  <div class="row">
+                      <div class="trends-page-column-info-box">
+                          <div id="trends-download-volume-label" class="trends-page-total-downloads-label">Total volume of downloads</div>
+                          <span id="trends-download-volume" class="trends-page-total-downloads">0</span>
+                          <br/>
+                      </div>
+                  </div>
+                  <div class="row trends-page-column-title">
+                      <div class="graph-title">Volume of products downloaded per Sentinel</div>
+                  </div>
+                  <div class="row trends-page-chart">
+                      <canvas id="myChart2x" width="200" height="200"></canvas>
+                  </div>
+                  <span>
+            <span class="sentinels-div" style="background-color: #FDC82F;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S1</span>
+                  <span class="sentinels-div" style="background-color: #008542;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S2</span>
+                  <span class="sentinels-div" style=" background-color: #0098D8;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S3</span>
+                  <span class="sentinels-div" style="background-color: #330066;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S5P</span>
+                  </span>
+              </div>
+          </div>
+          <div class="col-md-4 trends-page-column-container">
+              <div class="trends-page-column">
+                  <div class="row trends-page-column-title">
+                      <div class="graph-title">Overall archive exploitation ratio</div>
+                  </div>
+                  <div class="row trends-page-chart">
+                      <!-- <canvas id="myChart3" width="200" height="200"></canvas> -->
+                      <style>
+                      #bubble-chart {
+                          width: 500px;
+                          height: 500px;
+                          /*   border: solid;*/
+                      }
+                      </style>
+                      <!--   <canvas id="bubble-chart"></canvas> -->
+                      <svg id="bubble-chart" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">                                
+                          <circle id="s1-bubble" cx="100" cy="0" r="0" fill="#FDC82F" fill-opacity="1">
+                              <title>Sentinel-1</title>
+                          </circle>
+                          <circle id="s1-bubble-internal" cx="100" cy="0" r="0" fill="#ffffff" fill-opacity="1">
+                              <title>Sentinel-1</title>
+                          </circle>
+                          <text id="s1-bubble-label" font-family="NotesEsaReg" font-size="20px" text-anchor="middle" fill="#808080">----</text>
+                          <circle id="s2-bubble" cx="100" cy="0" r="0" fill="#008542" fill-opacity="1">
+                              <title>Sentinel-2</title>
+                          </circle>
+
+                          <circle id="s2-bubble-internal" cx="100" cy="0" r="0" fill="#ffffff" fill-opacity="1">
+                              <title>Sentinel-2</title>
+                          </circle>
+                          <text id="s2-bubble-label" font-family="NotesEsaReg" font-size="20px" text-anchor="middle" fill="#808080">----</text>
+
+                          <circle id="s3-bubble" cx="100" cy="0" r="0" fill="#0098D8" fill-opacity="1">
+                              <title>Sentinel-3</title>
+                          </circle>
+                          <circle id="s3-bubble-internal" cx="100" cy="0" r="0" fill="#ffffff" fill-opacity="1">
+                              <title>Sentinel-3</title>
+                          </circle>
+                          <text id="s3-bubble-label" font-family="NotesEsaReg" font-size="20px" text-anchor="middle" fill="#808080">----</text>
+
+                          <!-- sentinel-5p -->
+                          <circle id="s5p-bubble" cx="100" cy="0" r="0" fill="#330066" fill-opacity="1">
+                              <title>Sentinel-5p</title>
+                          </circle>
+                          <circle id="s5p-bubble-internal" cx="100" cy="0" r="0" fill="#ffffff" fill-opacity="1">
+                              <title>Sentinel-5p</title>
+                          </circle>
+                          <text id="s5p-bubble-label" font-family="NotesEsaReg" font-size="20px" text-anchor="middle" fill="#808080">----</text>
+
+
+                      </svg>
+                  </div>
+                  <span>
+            <span style="display:inline-block;width:50px; height:20px; background-color: #FDC82F;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S1</span>
+                  <span style="display:inline-block;width:50px; height:20px; background-color: #008542;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S2</span>
+                  <span style="display:inline-block;width:50px; height:20px; background-color: #0098D8;"></span><span style="display:inline-block; font-size:20px; margin-left:10px;margin-right:10px;">S3</span>
+                  <span class="over_exploitation_ratio_S5P" style="width:50px; height:20px; background-color: #330066;"></span><span class="over_exploitation_ratio_S5P" style="font-size:20px; margin-left:10px;margin-right:10px;">S5P</span>
+                  </span>
+                  <div class="row">
+                      <div class="trends-page-column-info-box" style="visibility:hidden">
+                          <span class="trends-page-total-downloads">83983</span>
+                          <br/>
+                          <div class="trends-page-total-downloads-label">Total number of downloads</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

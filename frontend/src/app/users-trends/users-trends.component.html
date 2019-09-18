@@ -1,0 +1,63 @@
+<div id="scrollable">
+  <h3 style="width:100%; text-align:center;"> Active Users on Copernicus Open Access Hub: Trends</h3>
+  <div class="container-fluid">
+    <div class="switch-button2">
+      <div class="first-interval-button" onclick="usersTrendsFirstInterval()">Last month</div>
+      <div class="second-interval-button" onclick="usersTrendsSecondInterval()">Last 3 months</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 page-column-container">
+        <div class="shadow">
+          <div class="row button-group">
+            <div class="graph-title">Active users trend</div>
+          </div>
+          <canvas id="canvas33" width="260" height="200"></canvas>
+          <br>
+          <div class="row text-center">
+            <div class="btn-group btn-group-lg button-group" role="group" aria-label="...">
+              <button type="button"
+                class="btn btn-default setAllUsersTrends trends-mission-buttons all-mission-label calendar-buttons"
+                data-toggle="button" aria-pressed="true" title="All Sentinels"><img
+                  src="../../assets/images/sentinels/all-sentinels.png" height="32" width="0">All</button>
+              <button type="button"
+                class="btn btn-default setSentinel1UsersTrends trends-mission-buttons calendar-buttons"
+                data-toggle="button" aria-pressed="false" title="Sentinel-1"><img src="../../assets/images/sentinels/s-1a_black.png"
+                  height="32">S-1</button>
+              <button type="button"
+                class="btn btn-default setSentinel2UsersTrends trends-mission-buttons calendar-buttons"
+                data-toggle="button" aria-pressed="false" title="Sentinel-2"><img src="../../assets/images/sentinels/s-2a_black.png"
+                  height="32">S-2</button>
+              <!--button type="button" class="btn btn-default setSentinel3UsersTrends trends-mission-buttons calendar-buttons" data-toggle="button" aria-pressed="false" title="Sentinel-3"><img src="images/sentinels/sentinel-3.png" height="32" >S-3</button-->
+              <!--button type="button" class="btn btn-default setSentinel5PUsersTrends" data-toggle="button" aria-pressed="false" title="Sentinel-5P"><img src="../images/sentinels/sentinel-5_big.png" height="32">S-5P</button-->
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-6 page-column-container">
+        <div class="shadow">
+          <div class="row button-group">
+            <div class="graph-title">User downloads profile</div>
+          </div>
+          <canvas id="myChart23" width="260" height="200"></canvas>
+          <script>
+          </script>
+          <br>
+          <div class="row text-center" style="visibility:hidden">
+            <div class="btn-group btn-group-lg button-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default setSentinel1UsersTrends calendar-buttons"
+                data-toggle="button" aria-pressed="false" title="Sentinel-1"><img src="../../assets/images/sentinels/s-1a_black.png"
+                  height="32">S-1</button>
+              <button type="button" class="btn btn-default setSentinel2UsersTrends calendar-buttons"
+                data-toggle="button" aria-pressed="false" title="Sentinel-2"><img src="../../assets/images/sentinels/s-2a_black.png"
+                  height="32">S-2</button>
+              <!--<button type="button" class="btn btn-default setSentinel3UsersTrends calendar-buttons" data-toggle="button" aria-pressed="false" title="Sentinel-3"><img src="images/sentinels/sentinel-3.png" height="32">S-3</button>-->
+              <!--button type="button" class="btn btn-default setSentinel5PUsersTrends" data-toggle="button" aria-pressed="false" title="Sentinel-5P"><img src="../images/sentinels/sentinel-5_big.png" height="32">S-5P</button-->
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
